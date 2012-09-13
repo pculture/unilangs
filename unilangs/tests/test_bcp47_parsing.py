@@ -16,51 +16,44 @@ class BCP47ParserTest(TestCase):
         return self.assertRaises(InvalidLanguageException,
                                  lambda: parse_code(code))
 
+    def assertTagDesc(self, subtag_dict, tag, desc):
+        self.assertEqual(subtag_dict['subtag'].lower(), tag)
+        self.assertEqual(subtag_dict['description'][0], desc)
+
+    def assertNil(self, language_dict, fields):
+        for f in fields:
+            val = language_dict[f]
+
+            if f in ['variants', 'extensions']:
+                self.assertEqual(val, [])
+            else:
+                self.assertIsNone(val)
+
 
     def test_grandfathered(self):
         p = parse_code('i-klingon')
         self.assertEqual(p['grandfathered']['tag'], 'i-klingon')
-        self.assertEqual(p['grandfathered']['preferred-value'], 'tlh')
         self.assertEqual(p['grandfathered']['description'][0], 'Klingon')
-        self.assertIsNone(p['language'])
-        self.assertIsNone(p['extlang'])
-        self.assertIsNone(p['script'])
-        self.assertIsNone(p['region'])
-        self.assertIsNone(p['variant'])
-        self.assertEqual(p['extensions'], [])
+        self.assertNil(p, ['language', 'extlang', 'script', 'region',
+                           'variants', 'extensions'])
 
         p = parse_code('art-lojban')
         self.assertEqual(p['grandfathered']['tag'], 'art-lojban')
-        self.assertEqual(p['grandfathered']['preferred-value'], 'jbo')
         self.assertEqual(p['grandfathered']['description'][0], 'Lojban')
-        self.assertIsNone(p['language'])
-        self.assertIsNone(p['extlang'])
-        self.assertIsNone(p['script'])
-        self.assertIsNone(p['region'])
-        self.assertIsNone(p['variant'])
-        self.assertEqual(p['extensions'], [])
+        self.assertNil(p, ['language', 'extlang', 'script', 'region',
+                           'variants', 'extensions'])
 
     def test_bare_language(self):
         # Bare, simple language codes should parse fine.
         p = parse_code('en')
-        self.assertEqual(p['language']['subtag'], 'en')
-        self.assertEqual(p['language']['description'][0], 'English')
-        self.assertIsNone(p['extlang'])
-        self.assertIsNone(p['script'])
-        self.assertIsNone(p['region'])
-        self.assertIsNone(p['variant'])
-        self.assertEqual(p['extensions'], [])
-        self.assertIsNone(p['grandfathered'])
+        self.assertTagDesc(p['language'], 'en', 'English')
+        self.assertNil(p, ['extlang', 'script', 'region', 'variants',
+                           'extensions', 'grandfathered'])
 
         p = parse_code('de')
-        self.assertEqual(p['language']['subtag'], 'de')
-        self.assertEqual(p['language']['description'][0], 'German')
-        self.assertIsNone(p['extlang'])
-        self.assertIsNone(p['script'])
-        self.assertIsNone(p['region'])
-        self.assertIsNone(p['variant'])
-        self.assertEqual(p['extensions'], [])
-        self.assertIsNone(p['grandfathered'])
+        self.assertTagDesc(p['language'], 'de', 'German')
+        self.assertNil(p, ['extlang', 'script', 'region', 'variants',
+                           'extensions', 'grandfathered'])
 
         # Language codes are case-insensitive.
         self.assertEqual(parse_code('en'), parse_code('EN'))
@@ -73,26 +66,16 @@ class BCP47ParserTest(TestCase):
     def test_language_script(self):
         # Languages with scripts should parse fine.
         p = parse_code('zh-Hans')
-        self.assertEqual(p['language']['subtag'], 'zh')
-        self.assertEqual(p['language']['description'][0], 'Chinese')
-        self.assertEqual(p['script']['subtag'].lower(), 'hans')
-        self.assertEqual(p['script']['description'][0], 'Han (Simplified variant)')
-        self.assertIsNone(p['extlang'])
-        self.assertIsNone(p['region'])
-        self.assertIsNone(p['variant'])
-        self.assertEqual(p['extensions'], [])
-        self.assertIsNone(p['grandfathered'])
+        self.assertTagDesc(p['language'], 'zh', 'Chinese')
+        self.assertTagDesc(p['script'], 'hans', 'Han (Simplified variant)')
+        self.assertNil(p, ['extlang', 'region', 'variants', 'extensions',
+                           'grandfathered'])
 
         p = parse_code('zh-HANT')
-        self.assertEqual(p['language']['subtag'], 'zh')
-        self.assertEqual(p['language']['description'][0], 'Chinese')
-        self.assertEqual(p['script']['subtag'].lower(), 'hant')
-        self.assertEqual(p['script']['description'][0], 'Han (Traditional variant)')
-        self.assertIsNone(p['extlang'])
-        self.assertIsNone(p['region'])
-        self.assertIsNone(p['variant'])
-        self.assertEqual(p['extensions'], [])
-        self.assertIsNone(p['grandfathered'])
+        self.assertTagDesc(p['language'], 'zh', 'Chinese')
+        self.assertTagDesc(p['script'], 'hant', 'Han (Traditional variant)')
+        self.assertNil(p, ['extlang', 'region', 'variants', 'extensions',
+                           'grandfathered'])
 
         # Scripts cannot stand without a language.
         self.assertInvalid('Cyrl')
@@ -107,37 +90,22 @@ class BCP47ParserTest(TestCase):
     def test_language_region(self):
         # Language with region codes should be fine.
         p = parse_code('en-us')
-        self.assertEqual(p['language']['subtag'], 'en')
-        self.assertEqual(p['language']['description'][0], 'English')
-        self.assertEqual(p['region']['subtag'].lower(), 'us')
-        self.assertEqual(p['region']['description'][0], 'United States')
-        self.assertIsNone(p['extlang'])
-        self.assertIsNone(p['script'])
-        self.assertIsNone(p['variant'])
-        self.assertEqual(p['extensions'], [])
-        self.assertIsNone(p['grandfathered'])
+        self.assertTagDesc(p['language'], 'en', 'English')
+        self.assertTagDesc(p['region'], 'us', 'United States')
+        self.assertNil(p, ['extlang', 'script', 'variants', 'extensions',
+                           'grandfathered'])
 
         p = parse_code('en-gb')
-        self.assertEqual(p['language']['subtag'], 'en')
-        self.assertEqual(p['language']['description'][0], 'English')
-        self.assertEqual(p['region']['subtag'].lower(), 'gb')
-        self.assertEqual(p['region']['description'][0], 'United Kingdom')
-        self.assertIsNone(p['extlang'])
-        self.assertIsNone(p['script'])
-        self.assertIsNone(p['variant'])
-        self.assertEqual(p['extensions'], [])
-        self.assertIsNone(p['grandfathered'])
+        self.assertTagDesc(p['language'], 'en', 'English')
+        self.assertTagDesc(p['region'], 'gb', 'United Kingdom')
+        self.assertNil(p, ['extlang', 'script', 'variants', 'extensions',
+                           'grandfathered'])
 
         p = parse_code('es-419')
-        self.assertEqual(p['language']['subtag'], 'es')
-        self.assertEqual(p['language']['description'][0], 'Spanish')
-        self.assertEqual(p['region']['subtag'].lower(), '419')
-        self.assertEqual(p['region']['description'][0], 'Latin America and the Caribbean')
-        self.assertIsNone(p['extlang'])
-        self.assertIsNone(p['script'])
-        self.assertIsNone(p['variant'])
-        self.assertEqual(p['extensions'], [])
-        self.assertIsNone(p['grandfathered'])
+        self.assertTagDesc(p['language'], 'es', 'Spanish')
+        self.assertTagDesc(p['region'], '419', 'Latin America and the Caribbean')
+        self.assertNil(p, ['extlang', 'script', 'variants', 'extensions',
+                           'grandfathered'])
 
         # Regions cannot be given without a language.
         self.assertInvalid('419')
@@ -151,28 +119,16 @@ class BCP47ParserTest(TestCase):
 
     def test_language_script_region(self):
         p = parse_code('en-Latn-us')
-        self.assertEqual(p['language']['subtag'], 'en')
-        self.assertEqual(p['language']['description'][0], 'English')
-        self.assertEqual(p['region']['subtag'].lower(), 'us')
-        self.assertEqual(p['region']['description'][0], 'United States')
-        self.assertEqual(p['script']['subtag'].lower(), 'latn')
-        self.assertEqual(p['script']['description'][0], 'Latin')
-        self.assertIsNone(p['extlang'])
-        self.assertIsNone(p['variant'])
-        self.assertEqual(p['extensions'], [])
-        self.assertIsNone(p['grandfathered'])
+        self.assertTagDesc(p['language'], 'en', 'English')
+        self.assertTagDesc(p['script'], 'latn', 'Latin')
+        self.assertTagDesc(p['region'], 'us', 'United States')
+        self.assertNil(p, ['extlang', 'variants', 'extensions', 'grandfathered'])
 
         p = parse_code('sr-Cyrl-RS')
-        self.assertEqual(p['language']['subtag'], 'sr')
-        self.assertEqual(p['language']['description'][0], 'Serbian')
-        self.assertEqual(p['region']['subtag'].lower(), 'rs')
-        self.assertEqual(p['region']['description'][0], 'Serbia')
-        self.assertEqual(p['script']['subtag'].lower(), 'cyrl')
-        self.assertEqual(p['script']['description'][0], 'Cyrillic')
-        self.assertIsNone(p['extlang'])
-        self.assertIsNone(p['variant'])
-        self.assertEqual(p['extensions'], [])
-        self.assertIsNone(p['grandfathered'])
+        self.assertTagDesc(p['language'], 'sr', 'Serbian')
+        self.assertTagDesc(p['script'], 'cyrl', 'Cyrillic')
+        self.assertTagDesc(p['region'], 'rs', 'Serbia')
+        self.assertNil(p, ['extlang', 'variants', 'extensions', 'grandfathered'])
 
         # Scripts and regions still require a language.
         self.assertInvalid('Latn-us')
@@ -181,3 +137,31 @@ class BCP47ParserTest(TestCase):
         self.assertInvalid('minecraft-Latn-us')
         self.assertMalformed('en-cursive-us')
         self.assertMalformed('en-Latn-murica')
+
+    def test_language_variants(self):
+        p = parse_code('sl-rozaj')
+        self.assertTagDesc(p['language'], 'sl', 'Slovenian')
+        self.assertTagDesc(p['variants'][0], 'rozaj', 'Resian')
+        self.assertNil(p, ['extlang', 'script', 'region', 'extensions',
+                           'grandfathered'])
+
+        p = parse_code('sl-rozaj-biske')
+        self.assertTagDesc(p['language'], 'sl', 'Slovenian')
+        self.assertTagDesc(p['variants'][0], 'rozaj', 'Resian')
+        self.assertTagDesc(p['variants'][1], 'biske', 'The San Giorgio dialect of Resian')
+        self.assertNil(p, ['extlang', 'script', 'region', 'extensions',
+                           'grandfathered'])
+
+        # Variants still require a language.
+        self.assertInvalid('rozaj')
+        self.assertInvalid('rozaj-biske')
+
+        # Invalid variants don't work.
+        self.assertMalformed('sl-rozajbad')
+
+    def test_language_region_variants(self):
+        p = parse_code('de-CH-1901')
+        self.assertTagDesc(p['language'], 'de', 'German')
+        self.assertTagDesc(p['region'], 'ch', 'Switzerland')
+        self.assertTagDesc(p['variants'][0], '1901', 'Traditional German orthography')
+        self.assertNil(p, ['extlang', 'script', 'extensions', 'grandfathered'])

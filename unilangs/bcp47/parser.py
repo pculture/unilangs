@@ -8,6 +8,7 @@ from unilangs.bcp47.registry import (
 from pprint import pprint
 
 
+# Exceptions
 class InvalidLanguageException(Exception):
     pass
 
@@ -15,6 +16,7 @@ class MalformedLanguageCodeException(Exception):
     pass
 
 
+# Convenience Functions
 def _split_at(pred, seq):
     """Split the given sequence into a number of sequences as a generator.
 
@@ -50,6 +52,7 @@ def _split_at(pred, seq):
         yield next
 
 
+# Parsing codes
 def _next_chunk(code):
     """Split a chunk off of the given code, return (chunk, rest)."""
     return code.split('-', 1) if '-' in code else (code, '')
@@ -90,6 +93,24 @@ def _parse_extensions(code):
     return results
 
 
+def _parse_subtag(next, code, reg):
+    if next in reg:
+        st = reg[next]
+        next, code = _next_chunk(code)
+        return st, next, code
+    else:
+        return None, next, code
+
+def _parse_variants(next, code):
+    variants = []
+    variant, next, code = _parse_subtag(next, code, VARIANT_SUBTAGS)
+
+    while variant:
+        variants.append(variant)
+        variant, next, code = _parse_subtag(next, code, VARIANT_SUBTAGS)
+
+    return variants, next, code
+
 def _parse_code(code):
     """Parse a BCP47 language code into its constituent parts.
 
@@ -97,10 +118,18 @@ def _parse_code(code):
 
         language-extlang-script-region-variant-extension-privateuse
 
-    Every one of those except for language is optional.
+    Every one of those except for language is optional.  Multiple variant tags
+    can appear, as well as any number of extensions.
 
     A dictionary of parts will be returned, with keys of 'language', 'extlang',
     etc and values of the entries in the BCP47 registry.
+    
+    The variant portion will be returned with a key of 'variants' and value of
+    a list of registry entries (possibly empty).
+
+    The extension portion will be returned as a list of tuples of (code,
+    [data...]).  For example, "en-x-foo-bar" would have an 'extensions' value
+    of [('x', ['foo', 'bar'])].
 
     Note that this function only validates the structure of the language code.
     It doesn't look at the semantic values of each piece and check for things
@@ -109,7 +138,7 @@ def _parse_code(code):
     """
     code = code.lower()
     result = {'language': None, 'extlang': None, 'script': None, 'region': None,
-              'variant': None, 'grandfathered': None, 'extensions': []}
+              'variants': [], 'grandfathered': None, 'extensions': []}
 
     # Grandfathered tags take precedence over everything.
     if code in GRANDFATHERED_SUBTAGS:
@@ -132,18 +161,10 @@ def _parse_code(code):
             "Invalid primary language '%s'!" % language)
 
     # Parse the rest of the subtags, in order.
-    def _parse_subtag(next, code, reg):
-        if next in reg:
-            st = reg[next]
-            next, code = _next_chunk(code)
-            return st, next, code
-        else:
-            return None, next, code
-
     result['extlang'], next, code = _parse_subtag(next, code, EXTLANG_SUBTAGS)
-    result['script'],  next, code = _parse_subtag(next, code, SCRIPT_SUBTAGS)
-    result['region'],  next, code = _parse_subtag(next, code, REGION_SUBTAGS)
-    result['variant'], next, code = _parse_subtag(next, code, VARIANT_SUBTAGS)
+    result['script'], next, code = _parse_subtag(next, code, SCRIPT_SUBTAGS)
+    result['region'], next, code = _parse_subtag(next, code, REGION_SUBTAGS)
+    result['variants'], next, code = _parse_variants(next, code)
 
     if next and not code:
         raise MalformedLanguageCodeException(
@@ -157,6 +178,8 @@ def _parse_code(code):
 
     return result
 
+
+# Validating parsed codes
 def _validate(l):
     """Validated that the parsed language dict makes sense."""
 
@@ -166,8 +189,11 @@ def _validate(l):
 
     return l
 
+
+# Public API
 def parse_code(bcp47_language_code):
     return _validate(_parse_code(bcp47_language_code))
+
 
 def _t(lc):
     print '=' * 60
