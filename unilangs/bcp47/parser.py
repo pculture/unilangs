@@ -69,8 +69,12 @@ def _parse_extensions(code):
          ('a', ['baz'])]
 
     """
-    chunks = _split_at(lambda el: len(el) == 1,
-                       code.split('-'))
+    chunks = list(_split_at(lambda el: len(el) == 1,
+                            code.split('-')))
+
+    if chunks and len(chunks[0]) != 1:
+        raise MalformedLanguageCodeException(
+            "Garbage '%s' at the end of the language code!" % code)
 
     results = []
     for chunk in chunks:
