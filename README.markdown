@@ -11,6 +11,8 @@ Still in alpha, don't use it unless you work for us.
 License
 -------
 
-Copyright 2012 Participatory Culture Foundation and contributors.
+Copyright (c) 2012 [Participatory Culture Foundation][pcf] and contributors.
 
-MIT/X11 licensed.
+MIT/X11 Licensed.
+
+[pcf]: http://pculture.org/
