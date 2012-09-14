@@ -72,17 +72,36 @@ def _parse_extensions(code):
          ('a', ['baz'])]
 
     """
-    chunks = list(_split_at(lambda el: len(el) == 1,
-                            code.split('-')))
-
-    if chunks and len(chunks[0]) != 1:
+    def _die():
         raise MalformedLanguageCodeException(
             "Garbage '%s' at the end of the language code!" % code)
 
+    # Split on dashes, and make sure we don't end up with any empty elements.
+    # Those would come from things like '-foo', 'foo-', or 'foo--bar', which
+    # are all invalid.
+    bits = code.split('-')
+    if any(not bit for bit in bits):
+        _die()
+
+    # Split the words into runs of [singleton, data, data, ...].
+    chunks = list(_split_at(lambda el: len(el) == 1, bits))
+
+    # We may not have anything at all.  That's fine.
+    if not chunks:
+        return []
+
+    # Because of the way split_at works, it's possible we may not have
+    # a singleton starting the first chunk, which is invalid (e.g. 'foo-x-bar').
+    if len(chunks[0][0]) != 1:
+        _die()
+
     results = []
     for chunk in chunks:
+        # We know we have a list of runs, each starting with a singleton tag.
         tag, data = chunk[0], chunk[1:]
 
+        # Singletons without data are disallowed by the spec (e.g.'x-a-foo'
+        # or 'x-foo-b').
         if not data:
             raise MalformedLanguageCodeException(
                 "Encountered a singleton extension tag '%s' without data!"

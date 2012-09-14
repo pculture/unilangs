@@ -165,3 +165,97 @@ class BCP47ParserTest(TestCase):
         self.assertTagDesc(p['region'], 'ch', 'Switzerland')
         self.assertTagDesc(p['variants'][0], '1901', 'Traditional German orthography')
         self.assertNil(p, ['extlang', 'script', 'extensions', 'grandfathered'])
+
+        p = parse_code('sl-it-nedis')
+        self.assertTagDesc(p['language'], 'sl', 'Slovenian')
+        self.assertTagDesc(p['region'], 'it', 'Italy')
+        self.assertTagDesc(p['variants'][0], 'nedis', 'Natisone dialect')
+        self.assertNil(p, ['extlang', 'script', 'extensions', 'grandfathered'])
+
+        p = parse_code('fr-419-1694acad-hepburn')
+        self.assertTagDesc(p['language'], 'fr', 'French')
+        self.assertTagDesc(p['region'], '419', 'Latin America and the Caribbean')
+        self.assertTagDesc(p['variants'][0], '1694acad', 'Early Modern French')
+        self.assertTagDesc(p['variants'][1], 'hepburn', 'Hepburn romanization')
+        self.assertNil(p, ['extlang', 'script', 'extensions', 'grandfathered'])
+
+        self.assertInvalid('419-1694acad')
+        self.assertMalformed('fr-2345-nedis')
+        self.assertMalformed('fr-ca-01010101')
+
+    def test_language_script_region_variants(self):
+        p = parse_code('hy-Latn-IT-arevela')
+        self.assertTagDesc(p['language'], 'hy', 'Armenian')
+        self.assertTagDesc(p['script'], 'latn', 'Latin')
+        self.assertTagDesc(p['region'], 'it', 'Italy')
+        self.assertTagDesc(p['variants'][0], 'arevela', 'Eastern Armenian')
+        self.assertNil(p, ['extlang', 'extensions', 'grandfathered'])
+
+        self.assertInvalid('Latn-IT-arevela')
+        self.assertMalformed('hy-invalid-IT-arevela')
+        self.assertMalformed('hy-Latn-invalid-arevela')
+        self.assertMalformed('hy-Latn-IT-invalid')
+
+    def test_language_extlang(self):
+        p = parse_code('zh-cmn-Hans-CN')
+        self.assertTagDesc(p['language'], 'zh', 'Chinese')
+        self.assertTagDesc(p['extlang'], 'cmn', 'Mandarin Chinese')
+        self.assertTagDesc(p['script'], 'hans', 'Han (Simplified variant)')
+        self.assertTagDesc(p['region'], 'cn', 'China')
+        self.assertNil(p, ['variants', 'extensions', 'grandfathered'])
+
+        p = parse_code('zh-yue-HK')
+        self.assertTagDesc(p['language'], 'zh', 'Chinese')
+        self.assertTagDesc(p['extlang'], 'yue', 'Yue Chinese')
+        self.assertTagDesc(p['region'], 'hk', 'Hong Kong')
+        self.assertNil(p, ['script', 'variants', 'extensions', 'grandfathered'])
+
+        self.assertMalformed('zh-invalid-Hans-CN')
+        self.assertMalformed('zh-cmn-invalid-CN')
+        self.assertMalformed('zh-cmn-Hans-invalid')
+
+    def test_extensions(self):
+        p = parse_code('x-cheese')
+        self.assertEqual(p['extensions'][0], ('x', ['cheese']))
+        self.assertNil(p, ['language', 'extlang', 'script', 'region',
+                           'variants', 'grandfathered'])
+
+        p = parse_code('x-cheese-and-crackers')
+        self.assertEqual(p['extensions'][0], ('x', ['cheese', 'and', 'crackers']))
+        self.assertNil(p, ['language', 'extlang', 'script', 'region',
+                           'variants', 'grandfathered'])
+
+        p = parse_code('fr-u-ham-and-swiss')
+        self.assertTagDesc(p['language'], 'fr', 'French')
+        self.assertEqual(p['extensions'][0], ('u', ['ham', 'and', 'swiss']))
+        self.assertNil(p, ['extlang', 'script', 'region', 'variants',
+                           'grandfathered'])
+
+        p = parse_code('hy-Latn-IT-arevela-x-phonebook-a-foo-b-bar-baz')
+        self.assertTagDesc(p['language'], 'hy', 'Armenian')
+        self.assertTagDesc(p['script'], 'latn', 'Latin')
+        self.assertTagDesc(p['region'], 'it', 'Italy')
+        self.assertTagDesc(p['variants'][0], 'arevela', 'Eastern Armenian')
+        self.assertEqual(p['extensions'][0], ('x', ['phonebook']))
+        self.assertEqual(p['extensions'][1], ('a', ['foo']))
+        self.assertEqual(p['extensions'][2], ('b', ['bar', 'baz']))
+        self.assertNil(p, ['extlang', 'grandfathered'])
+
+        # Extensions have to contain data.
+        self.assertMalformed('x-')
+        self.assertMalformed('x-x-foo')
+        self.assertMalformed('x-a-foo')
+        self.assertMalformed('x-foo-a')
+        self.assertMalformed('x--eggs')
+        self.assertMalformed('x-egg--dog')
+        self.assertMalformed('x-egg-dog-')
+
+        # Private use extensions can stand alone, but others cannot.
+        self.assertInvalid('a-foo')
+        self.assertInvalid('u-bar')
+        self.assertInvalid('u-bar-x-baz')
+
+        # According to the spec, I *think* this should be invalid, but I'm not
+        # 100% sure so we'll accept it for now.
+        # self.assertMalformed('x-foo-a-bar')
+
