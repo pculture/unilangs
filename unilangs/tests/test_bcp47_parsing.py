@@ -20,8 +20,10 @@ class BCP47ParserTest(TestCase):
         for f in fields:
             val = language_dict[f]
 
-            if f in ['variants', 'extensions']:
+            if f == 'variants':
                 self.assertEqual(val, [])
+            elif f == 'extensions':
+                self.assertEqual(val, {})
             else:
                 self.assertIsNone(val)
 
@@ -212,18 +214,18 @@ class BCP47ParserTest(TestCase):
 
     def test_extensions(self):
         p = parse_code('x-cheese')
-        self.assertEqual(p['extensions'][0], ('x', ['cheese']))
+        self.assertEqual(p['extensions'], {'x': ['cheese']})
         self.assertNil(p, ['language', 'extlang', 'script', 'region',
                            'variants', 'grandfathered'])
 
         p = parse_code('x-cheese-and-crackers')
-        self.assertEqual(p['extensions'][0], ('x', ['cheese', 'and', 'crackers']))
+        self.assertEqual(p['extensions'], {'x': ['cheese', 'and', 'crackers']})
         self.assertNil(p, ['language', 'extlang', 'script', 'region',
                            'variants', 'grandfathered'])
 
         p = parse_code('fr-u-ham-and-swiss')
         self.assertTagDesc(p['language'], 'fr', 'French')
-        self.assertEqual(p['extensions'][0], ('u', ['ham', 'and', 'swiss']))
+        self.assertEqual(p['extensions'], {'u': ['ham', 'and', 'swiss']})
         self.assertNil(p, ['extlang', 'script', 'region', 'variants',
                            'grandfathered'])
 
@@ -232,9 +234,9 @@ class BCP47ParserTest(TestCase):
         self.assertTagDesc(p['script'], 'latn', 'Latin')
         self.assertTagDesc(p['region'], 'it', 'Italy')
         self.assertTagDesc(p['variants'][0], 'arevela', 'Eastern Armenian')
-        self.assertEqual(p['extensions'][0], ('x', ['phonebook']))
-        self.assertEqual(p['extensions'][1], ('a', ['foo']))
-        self.assertEqual(p['extensions'][2], ('b', ['bar', 'baz']))
+        self.assertEqual(p['extensions'], {'x': ['phonebook'],
+                                           'a': ['foo'],
+                                           'b': ['bar', 'baz']})
         self.assertNil(p, ['extlang', 'grandfathered'])
 
         # Extensions have to contain data.

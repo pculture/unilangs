@@ -61,12 +61,12 @@ def _parse_extensions(code):
     The code must *only* consist of extensions (it's assumed you've already
     parsed the beginning).
 
-    A list of tuples will be returned, looking something like this:
+    A dict of lists will be returned, looking something like this:
 
         _parse_extensions('x-foo-bar-a-baz')
 
-        [('x', ['foo', 'bar']),
-         ('a', ['baz'])]
+        {'x': ['foo', 'bar'],
+         'a': ['baz']}
 
     """
     def _die():
@@ -85,15 +85,14 @@ def _parse_extensions(code):
 
     # We may not have anything at all.  That's fine.
     if not chunks:
-        return []
+        return {}
 
     # Because of the way split_at works, it's possible we may not have
     # a singleton starting the first chunk, which is invalid (e.g. 'foo-x-bar').
     if len(chunks[0][0]) != 1:
         _die()
 
-    results = []
-    seen = set()
+    results = {}
     for chunk in chunks:
         # We know we have a list of runs, each starting with a singleton tag.
         tag, data = chunk[0], chunk[1:]
@@ -105,12 +104,11 @@ def _parse_extensions(code):
                 "Encountered a singleton extension tag '%s' without data!"
                 % chunk[0])
 
-        if tag in seen:
+        if tag in results:
             raise MalformedLanguageCodeException(
                 "Encountered a duplicate singleton extension tag '%s'!" % tag)
 
-        seen.add(tag)
-        results.append((tag, data))
+        results[tag] = data
 
     return results
 
@@ -160,7 +158,7 @@ def _parse_code(code):
     """
     code = code.lower()
     result = {'language': None, 'extlang': None, 'script': None, 'region': None,
-              'variants': [], 'grandfathered': None, 'extensions': []}
+              'variants': [], 'grandfathered': None, 'extensions': {}}
 
     # Grandfathered tags take precedence over everything.
     if code in GRANDFATHERED_SUBTAGS:
@@ -227,12 +225,6 @@ def _t(lc):
     pprint(parse_code(lc))
     print
 
-# _t('en')
-# _t('zh-yue')
-# _t('zh-yue-Hans')
-# _t('zh-Hans')
-# _t('sl-nedis')
-# _t('en-Latn-US-x-hurr-u-durr-a-spam-eggs')
 _t('art-lojban')
 _t('jbo')
 _t('i-klingon')
