@@ -9,9 +9,6 @@ from pprint import pprint
 
 
 # Exceptions
-class InvalidLanguageException(Exception):
-    pass
-
 class MalformedLanguageCodeException(Exception):
     pass
 
@@ -96,6 +93,7 @@ def _parse_extensions(code):
         _die()
 
     results = []
+    seen = set()
     for chunk in chunks:
         # We know we have a list of runs, each starting with a singleton tag.
         tag, data = chunk[0], chunk[1:]
@@ -107,6 +105,11 @@ def _parse_extensions(code):
                 "Encountered a singleton extension tag '%s' without data!"
                 % chunk[0])
 
+        if tag in seen:
+            raise MalformedLanguageCodeException(
+                "Encountered a duplicate singleton extension tag '%s'!" % tag)
+
+        seen.add(tag)
         results.append((tag, data))
 
     return results
@@ -169,6 +172,11 @@ def _parse_code(code):
         result['extensions'] = _parse_extensions(code)
         return result
 
+    # Ensure that there are no empty chunks, like 'en--us' or 'en-'.
+    if any((not c) for c in code.split('-')):
+        raise MalformedLanguageCodeException(
+            "Invalid language code (malformed hyphen)!")
+
     # Language is required and always comes first, no matter what.
     language, code = _next_chunk(code)
 
@@ -176,7 +184,7 @@ def _parse_code(code):
         result['language'] = LANGUAGE_SUBTAGS[language]
         next, code = _next_chunk(code)
     else:
-        raise InvalidLanguageException(
+        raise MalformedLanguageCodeException(
             "Invalid primary language '%s'!" % language)
 
     # Parse the rest of the subtags, in order.

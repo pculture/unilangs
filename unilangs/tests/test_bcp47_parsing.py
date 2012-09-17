@@ -2,9 +2,8 @@
 
 from unittest import TestCase
 from unilangs.bcp47.parser import (
-    parse_code, MalformedLanguageCodeException, InvalidLanguageException
+    parse_code, MalformedLanguageCodeException
 )
-from pprint import pprint as pp
 
 
 class BCP47ParserTest(TestCase):
@@ -12,9 +11,6 @@ class BCP47ParserTest(TestCase):
         return self.assertRaises(MalformedLanguageCodeException,
                                  lambda: parse_code(code))
 
-    def assertInvalid(self, code):
-        return self.assertRaises(InvalidLanguageException,
-                                 lambda: parse_code(code))
 
     def assertTagDesc(self, subtag_dict, tag, desc):
         self.assertEqual(subtag_dict['subtag'].lower(), tag)
@@ -60,8 +56,8 @@ class BCP47ParserTest(TestCase):
         self.assertEqual(parse_code('en'), parse_code('eN'))
 
         # Invalid languages should throw errors.
-        self.assertInvalid('cheese')
-        self.assertInvalid('dogs')
+        self.assertMalformed('cheese')
+        self.assertMalformed('dogs')
 
     def test_language_script(self):
         # Languages with scripts should parse fine.
@@ -78,11 +74,11 @@ class BCP47ParserTest(TestCase):
                            'grandfathered'])
 
         # Scripts cannot stand without a language.
-        self.assertInvalid('Cyrl')
-        self.assertInvalid('Hant')
+        self.assertMalformed('Cyrl')
+        self.assertMalformed('Hant')
 
         # Invalid languages are still invalid, even with a script.
-        self.assertInvalid('kitties-Hant')
+        self.assertMalformed('kitties-Hant')
 
         # Invalid scripts are invalid.
         self.assertMalformed('zh-Hannt')
@@ -108,11 +104,11 @@ class BCP47ParserTest(TestCase):
                            'grandfathered'])
 
         # Regions cannot be given without a language.
-        self.assertInvalid('419')
-        self.assertInvalid('gb')
+        self.assertMalformed('419')
+        self.assertMalformed('gb')
 
         # Invalid languages are still invalid, even with a region.
-        self.assertInvalid('cheese-gb')
+        self.assertMalformed('cheese-gb')
 
         # Invalid regions are invalid.
         self.assertMalformed('en-murica')
@@ -131,10 +127,10 @@ class BCP47ParserTest(TestCase):
         self.assertNil(p, ['extlang', 'variants', 'extensions', 'grandfathered'])
 
         # Scripts and regions still require a language.
-        self.assertInvalid('Latn-us')
+        self.assertMalformed('Latn-us')
 
         # Invalid language codes, scripts, and regions don't work.
-        self.assertInvalid('minecraft-Latn-us')
+        self.assertMalformed('minecraft-Latn-us')
         self.assertMalformed('en-cursive-us')
         self.assertMalformed('en-Latn-murica')
 
@@ -153,8 +149,8 @@ class BCP47ParserTest(TestCase):
                            'grandfathered'])
 
         # Variants still require a language.
-        self.assertInvalid('rozaj')
-        self.assertInvalid('rozaj-biske')
+        self.assertMalformed('rozaj')
+        self.assertMalformed('rozaj-biske')
 
         # Invalid variants don't work.
         self.assertMalformed('sl-rozajbad')
@@ -179,7 +175,7 @@ class BCP47ParserTest(TestCase):
         self.assertTagDesc(p['variants'][1], 'hepburn', 'Hepburn romanization')
         self.assertNil(p, ['extlang', 'script', 'extensions', 'grandfathered'])
 
-        self.assertInvalid('419-1694acad')
+        self.assertMalformed('419-1694acad')
         self.assertMalformed('fr-2345-nedis')
         self.assertMalformed('fr-ca-01010101')
 
@@ -191,7 +187,7 @@ class BCP47ParserTest(TestCase):
         self.assertTagDesc(p['variants'][0], 'arevela', 'Eastern Armenian')
         self.assertNil(p, ['extlang', 'extensions', 'grandfathered'])
 
-        self.assertInvalid('Latn-IT-arevela')
+        self.assertMalformed('Latn-IT-arevela')
         self.assertMalformed('hy-invalid-IT-arevela')
         self.assertMalformed('hy-Latn-invalid-arevela')
         self.assertMalformed('hy-Latn-IT-invalid')
@@ -251,11 +247,31 @@ class BCP47ParserTest(TestCase):
         self.assertMalformed('x-egg-dog-')
 
         # Private use extensions can stand alone, but others cannot.
-        self.assertInvalid('a-foo')
-        self.assertInvalid('u-bar')
-        self.assertInvalid('u-bar-x-baz')
+        self.assertMalformed('a-foo')
+        self.assertMalformed('u-bar')
+        self.assertMalformed('u-bar-x-baz')
 
         # According to the spec, I *think* this should be invalid, but I'm not
         # 100% sure so we'll accept it for now.
         # self.assertMalformed('x-foo-a-bar')
 
+    def test_invalid(self):
+        """Test some malformed tags to make sure they don't parse."""
+
+        # Two regions.
+        self.assertMalformed('de-419-DE')
+
+        # Starting with a non-x singleton.
+        self.assertMalformed('a-DE')
+
+        # Bad dashes.
+        self.assertMalformed('en--us')
+        self.assertMalformed('en-us-')
+
+        # Garbage.
+        self.assertMalformed('en-us,')
+        self.assertMalformed('en us')
+
+        # Duplicate extension singleton tags.
+        self.assertMalformed('ar-a-aaa-b-bbb-a-ccc')
+        self.assertMalformed('en-us-a-123-b-bbb-a-ccc')
