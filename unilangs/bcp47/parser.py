@@ -143,7 +143,7 @@ def _parse_code(code):
 
     A dictionary of parts will be returned, with keys of 'language', 'extlang',
     etc and values of the entries in the BCP47 registry.
-    
+
     The variant portion will be returned with a key of 'variants' and value of
     a list of registry entries (possibly empty).
 
@@ -206,7 +206,12 @@ def _parse_code(code):
 
 # Validating parsed codes
 def _validate(l):
-    """Validated that the parsed language dict makes sense."""
+    """Validated that the parsed language dict makes sense.
+
+    Returns the language code if it's okay, or throws an exception if it's
+    broken.
+
+    """
 
     # Grandfathered languages are always valid.
     if l['grandfathered']:
@@ -219,12 +224,3 @@ def _validate(l):
 def parse_code(bcp47_language_code):
     return _validate(_parse_code(bcp47_language_code))
 
-
-def _t(lc):
-    print '=' * 60
-    pprint(parse_code(lc))
-    print
-
-_t('art-lojban')
-_t('jbo')
-_t('i-klingon')
