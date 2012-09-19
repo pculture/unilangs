@@ -30,6 +30,10 @@ This is similar to Python's handling of Unicode and byte strings:
 import copy
 import re
 
+from .bcp47.converter import (
+    StrictBCP47ToUnilangConverter, LossyBCP47ToUnilangConverter
+)
+
 
 def _reverse_dict(d):
     return dict([(v, k) for k, v in d.items()])
@@ -117,6 +121,19 @@ def add_standard(standard, mapping, base=None, exclude=None):
 
     TO_INTERNAL[standard] = m
     FROM_INTERNAL[standard] = _reverse_dict(m)
+
+def add_standard_custom(standard, to_internal, from_internal):
+    """Add a new standard to the list of supported standards with custom dicts.
+
+    `to_internal` should be a dictionary mapping your custom standard's codes to
+    the internal "universal" code used by this library.
+
+    `from_internal` should be a dictionary mapping the internal "universal"
+    codes to your custom standard's codes.
+
+    """
+    TO_INTERNAL[standard] = to_internal
+    FROM_INTERNAL[standard] = from_internal
 
 def _generate_initial_data():
     INTERNAL_NAMES.update({
@@ -1046,12 +1063,17 @@ def _add_youtube():
         'za': 'za',
         'zu': 'zul'})
 
+def _add_bcp47():
+    add_standard_custom('bcp47', StrictBCP47ToUnilangConverter(), {})
+    add_standard_custom('bcp47-lossy', LossyBCP47ToUnilangConverter(), {})
+
 
 _generate_initial_data()
 _add_iso_639_1()
 _add_django()
 _add_unisubs()
 _add_youtube()
+_add_bcp47()
 
 class LanguageCode(object):
     def __init__(self, language_code, standard):

@@ -3,10 +3,28 @@
 from unilangs.bcp47.parser import parse_code
 
 
-class BestFitDict(dict):
+# Custom dict classes to make adding and lookup up easier.
+class BCP47Dict(dict):
     def add(self, value, language, region=None, script=None):
         self[(language, region, script)] = value
 
+    def add_all(self, langs):
+        for lang in langs:
+            self.add(*lang)
+
+class StrictDict(BCP47Dict):
+    def lookup(self, language, region, script):
+        """Look up a value, returning the best-fitting entry."""
+
+        try:
+            return self[(language, region, script)]
+        except KeyError:
+            raise KeyError(
+                "Could not find Unilangs language for BCP47 "+
+                "language '%s', region '%s', script '%s'"
+                % (language, region, script))
+
+class BestFitDict(BCP47Dict):
     def lookup(self, language, region, script):
         """Look up a value, returning the best-fitting entry."""
 
@@ -24,15 +42,10 @@ class BestFitDict(dict):
                 "language '%s', region '%s', script '%s'"
                 % (language, region, script))
 
-    def add_all(self, langs):
-        for lang in langs:
-            self.add(*lang)
 
-
+# Create the strict and lossy dictionaries.
 def _make_bcp47_to_unilangs():
-    btu = BestFitDict()
-
-    btu.add_all((
+    data = (
         # Unilangs code
         # |     BCP47 language[, region]
         # |     |
@@ -274,16 +287,21 @@ def _make_bcp47_to_unilangs():
         ('zh-sg', 'zh', 'sg', 'hans'),
         ('zh-hk', 'zh', 'hk', 'hant'),
         ('zul', 'zu'),
-    ))
+    )
 
-    return btu
+    lossy_dict = BestFitDict()
+    strict_dict = StrictDict()
 
-BCP47_TO_UNILANGS = _make_bcp47_to_unilangs()
+    lossy_dict.add_all(data)
+    strict_dict.add_all(data)
+
+    return strict_dict, lossy_dict
+
+BCP47_TO_UNILANGS_STRICT, BCP47_TO_UNILANGS_LOSSY = _make_bcp47_to_unilangs()
 
 
+# Create the strict and lossy converters that unilangs will use.
 class BCP47ToUnilangConverter(object):
-    """A conversion utility masquerading as a dict to fit into unilangs."""
-
     def __getitem__(self, k):
         parts = parse_code(k)
 
@@ -294,11 +312,21 @@ class BCP47ToUnilangConverter(object):
         region = _get_part('region')
         script = _get_part('script')
 
-        return BCP47_TO_UNILANGS.lookup(language, region, script)
+        return self._lookup_dict.lookup(language, region, script)
 
     def get(self, k, notfound=None):
         try:
             return self[k]
         except KeyError:
             return notfound
+
+class StrictBCP47ToUnilangConverter(BCP47ToUnilangConverter):
+    """A strict conversion utility masquerading as a dict to fit unilangs."""
+    def __init__(self):
+        self._lookup_dict = BCP47_TO_UNILANGS_STRICT
+
+class LossyBCP47ToUnilangConverter(BCP47ToUnilangConverter):
+    """A lossy conversion utility masquerading as a dict to fit unilangs."""
+    def __init__(self):
+        self._lookup_dict = BCP47_TO_UNILANGS_LOSSY
 

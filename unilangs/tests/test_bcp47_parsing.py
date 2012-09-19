@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from os.path import dirname, join
 
 from unittest import TestCase
 from unilangs.bcp47.parser import (
@@ -277,3 +278,19 @@ class BCP47ParserTest(TestCase):
         # Duplicate extension singleton tags.
         self.assertMalformed('ar-a-aaa-b-bbb-a-ccc')
         self.assertMalformed('en-us-a-123-b-bbb-a-ccc')
+
+    def test_youtube(self):
+        """Test a bunch of language codes YouTube uses.
+
+        This should give us a nice variety of test cases.
+
+        """
+        with open(join(dirname(__file__), 'youtube_languages.txt')) as f:
+            for code in f:
+                # For some reason youtube uses underscores in some of its codes.
+                # We'll just strip them out here -- users of the library can do
+                # sanitation stuff like this themselves.
+                code = code.strip()
+                code = code.replace('_', '-')
+
+                self.assertIsNotNone(parse_code(code))
