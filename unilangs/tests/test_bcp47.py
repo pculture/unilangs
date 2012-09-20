@@ -6,34 +6,60 @@ from unilangs.unilangs import LanguageCode
 
 
 class LanguageCodeTest(TestCase):
-    def assertEncodesAs(self, bcp47_code, unilangs_code):
+    def assertEncodesAs(self, unisubs_code, bcp47_code):
+        lc = LanguageCode(unisubs_code, 'unisubs')
+        self.assertEqual(bcp47_code, lc.encode('bcp47'),
+                        "Unisubs code '%s' did not encode to BCP47 code '%s' (it encoded to '%s' instead)!"
+                         % (unisubs_code, bcp47_code, lc.encode('bcp47')))
+
+    def assertDecodesAs(self, bcp47_code, unilangs_code):
         lc = LanguageCode(bcp47_code, 'bcp47')
         self.assertEqual(unilangs_code, lc.encode('unisubs'),
-                         "BCP47 code '%s' did not encode to unilangs code '%s'!"
+                         "BCP47 code '%s' did not decode to unilangs code '%s'!"
                          % (bcp47_code, unilangs_code))
 
-    def assertLossilyEncodesAs(self, bcp47_code, unilangs_code):
+    def assertLossilyDecodesAs(self, bcp47_code, unilangs_code):
         lc = LanguageCode(bcp47_code, 'bcp47-lossy')
         self.assertEqual(unilangs_code, lc.encode('unisubs'),
-                         "BCP47 code '%s' did not lossily encode to unilangs code '%s'!"
+                         "BCP47 code '%s' did not lossily decode to unilangs code '%s'!"
                          % (bcp47_code, unilangs_code))
 
-    def test_encode_strict(self):
-        self.assertEncodesAs('en', 'en')
-        self.assertEncodesAs('en-u-foo', 'en')
 
-        self.assertEncodesAs('en-GB-a-foo-x-mouse-dogs-cats', 'en-gb')
+    def test_decode_strict(self):
+        self.assertDecodesAs('en', 'en')
+        self.assertDecodesAs('en-u-foo', 'en')
 
-        self.assertEncodesAs('pt', 'pt')
-        self.assertEncodesAs('pt-br', 'pt-br')
+        self.assertDecodesAs('en-GB-a-foo-x-mouse-dogs-cats', 'en-gb')
 
-        self.assertEncodesAs('ig', 'ibo')
+        self.assertDecodesAs('pt', 'pt')
+        self.assertDecodesAs('pt-br', 'pt-br')
 
-    def test_encode_lossy(self):
-        self.assertLossilyEncodesAs('en-us-u-foo', 'en')
-        self.assertLossilyEncodesAs('en-Latn-US', 'en')
+        self.assertDecodesAs('ig', 'ibo')
+        self.assertDecodesAs('fy', 'fy-nl')
 
-        self.assertLossilyEncodesAs('en-latn-GB-a-foo-x-dogs-cats', 'en-gb')
+        self.assertDecodesAs('es', 'es')
+        self.assertDecodesAs('es-ar', 'es-ar')
+        self.assertDecodesAs('es-mx', 'es-mx')
+        self.assertDecodesAs('es-ni', 'es-ni')
 
-        self.assertLossilyEncodesAs('es-es', 'es')
+    def test_decode_lossy(self):
+        self.assertLossilyDecodesAs('en-us-u-foo', 'en')
+        self.assertLossilyDecodesAs('en-Latn-US', 'en')
 
+        self.assertLossilyDecodesAs('en-latn-GB-a-foo-x-dogs-cats', 'en-gb')
+
+        self.assertLossilyDecodesAs('es-es', 'es')
+
+
+    def test_encode(self):
+        """Test that some basic languages encode to bcp47 properly."""
+
+        #                    Unilangs   BCP47
+        self.assertEncodesAs('en',      'en')
+        self.assertEncodesAs('ibo',     'ig')
+        self.assertEncodesAs('en-gb',   'en-gb')
+        self.assertEncodesAs('fy-nl',   'fy')
+        self.assertEncodesAs('sr-latn', 'sr-latn')
+        self.assertEncodesAs('zh-cn',   'zh-hans')
+        self.assertEncodesAs('zh-hk',   'zh-hant-hk')
+        self.assertEncodesAs('swa',     'sw')

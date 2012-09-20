@@ -299,6 +299,19 @@ def _make_bcp47_to_unilangs():
 
 BCP47_TO_UNILANGS_STRICT, BCP47_TO_UNILANGS_LOSSY = _make_bcp47_to_unilangs()
 
+def _make_unilangs_to_bcp47():
+    result = {}
+
+    for bcp47, unilangs_code in BCP47_TO_UNILANGS_STRICT.items():
+        print bcp47, unilangs_code
+        language, region, script = bcp47
+        bcp47_code = '-'.join(filter(None, (language, script, region)))
+        result[unilangs_code] = bcp47_code
+
+    return result
+
+UNILANGS_TO_BCP47 = _make_unilangs_to_bcp47()
+
 
 # Create the strict and lossy converters that unilangs will use.
 class BCP47ToUnilangConverter(object):

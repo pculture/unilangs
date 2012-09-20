@@ -31,7 +31,8 @@ import copy
 import re
 
 from .bcp47.converter import (
-    StrictBCP47ToUnilangConverter, LossyBCP47ToUnilangConverter
+    StrictBCP47ToUnilangConverter, LossyBCP47ToUnilangConverter,
+    UNILANGS_TO_BCP47
 )
 
 
@@ -1064,8 +1065,10 @@ def _add_youtube():
         'zu': 'zul'})
 
 def _add_bcp47():
-    add_standard_custom('bcp47', StrictBCP47ToUnilangConverter(), {})
-    add_standard_custom('bcp47-lossy', LossyBCP47ToUnilangConverter(), {})
+    add_standard_custom('bcp47', StrictBCP47ToUnilangConverter(),
+                        UNILANGS_TO_BCP47)
+    add_standard_custom('bcp47-lossy', LossyBCP47ToUnilangConverter(),
+                        UNILANGS_TO_BCP47)
 
 
 _generate_initial_data()
