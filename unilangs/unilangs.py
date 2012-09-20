@@ -1211,3 +1211,4 @@ def to_bcp47(code):
     return "%s%s%s" % (match_dict['lang_code'],
                        (match_dict.get('dialect', "") or "").upper(),
                        match_dict.get('rest', '') or "")
+

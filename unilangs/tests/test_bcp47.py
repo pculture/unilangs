@@ -5,7 +5,7 @@ from unittest import TestCase
 from unilangs.unilangs import LanguageCode
 
 
-class LanguageCodeTest(TestCase):
+class BCP47Test(TestCase):
     def assertEncodesAs(self, unisubs_code, bcp47_code):
         lc = LanguageCode(unisubs_code, 'unisubs')
         self.assertEqual(bcp47_code, lc.encode('bcp47'),
@@ -23,6 +23,12 @@ class LanguageCodeTest(TestCase):
         self.assertEqual(unilangs_code, lc.encode('unisubs'),
                          "BCP47 code '%s' did not lossily decode to unilangs code '%s'!"
                          % (bcp47_code, unilangs_code))
+
+    def assertRoundtrips(self, bcp47_code):
+        lc = LanguageCode(bcp47_code, 'bcp47')
+        self.assertEqual(bcp47_code, lc.encode('bcp47'),
+                        "BCP47 code '%s' did not round trip properly (it encoded to '%s' instead)!"
+                         % (bcp47_code, lc.encode('bcp47')))
 
 
     def test_decode_strict(self):
@@ -63,3 +69,11 @@ class LanguageCodeTest(TestCase):
         self.assertEncodesAs('zh-cn',   'zh-hans')
         self.assertEncodesAs('zh-hk',   'zh-hant-hk')
         self.assertEncodesAs('swa',     'sw')
+
+    def test_roundtrip(self):
+        self.assertRoundtrips('en')
+        self.assertRoundtrips('es-ar')
+        self.assertRoundtrips('fy')
+        self.assertRoundtrips('ff')
+        self.assertRoundtrips('sr-latn')
+        self.assertRoundtrips('zh-hans-sg')
