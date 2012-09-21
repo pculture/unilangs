@@ -4,13 +4,17 @@ from os.path import dirname, join
 import unilangs.bcp47.parser as parser
 from unittest import TestCase
 from unilangs.bcp47.parser import (
-    parse_code, MalformedLanguageCodeException
+    parse_code, InvalidLanguageCodeException, MalformedLanguageCodeException
 )
 
 
 class BCP47ParserTest(TestCase):
     def assertMalformed(self, code):
         return self.assertRaises(MalformedLanguageCodeException,
+                                 lambda: parse_code(code))
+
+    def assertInvalid(self, code):
+        return self.assertRaises(InvalidLanguageCodeException,
                                  lambda: parse_code(code))
 
 
@@ -377,3 +381,9 @@ class BCP47ParserTest(TestCase):
         self.assertTagDesc(p['script'], 'hans', 'Han (Simplified variant)')
         self.assertNil(p, ['extlang', 'region', 'variants', 'extensions',
                            'grandfathered'])
+
+
+    def test_extlang_prefix_validation(self):
+        self.assertInvalid('en-ase')
+        self.assertInvalid('is-acy-ar')
+        self.assertInvalid('jax-jax')

@@ -12,6 +12,9 @@ from pprint import pprint
 class MalformedLanguageCodeException(Exception):
     pass
 
+class InvalidLanguageCodeException(Exception):
+    pass
+
 
 # Convenience Functions
 def _split_at(pred, seq):
@@ -48,6 +51,18 @@ def _split_at(pred, seq):
     if next:
         yield next
 
+def _get_in(d, *keys):
+    """Get a value from a series of nested dicts, or None if any don't exist."""
+
+    for k in keys:
+        try:
+            if d == None:
+                return None
+            else:
+                d = d[k]
+        except KeyError:
+            return None
+    return d
 
 # Parsing codes
 def _next_chunk(code):
@@ -216,17 +231,31 @@ def _parse_code(code):
 
 
 # Validating parsed codes
+def _validate_extlang_prefix(l):
+    """All extlangs have a prefix that is a single language."""
+
+    prefix = _get_in(l, 'extlang', 'prefix', 0)
+
+    if prefix:
+        actual_lang = _get_in(l, 'language', 'subtag')
+
+        if prefix != actual_lang:
+            raise InvalidLanguageCodeException(
+                "Extlang '%s' requires a language of '%s', but got '%s' instead!"
+                % (_get_in(l, 'extlang', 'subtag'), prefix, actual_lang))
+
 def _validate(l):
     """Validated that the parsed language dict makes sense.
 
-    Returns the language code if it's okay, or throws an exception if it's
-    broken.
+    Returns the dict if it's okay, or throws an exception if it's broken.
 
     """
 
     # Grandfathered languages are always valid.
     if l['grandfathered']:
         return l
+
+    _validate_extlang_prefix(l)
 
     return l
 

@@ -72689,6 +72689,7 @@ data = r'''
     },
     "macrolanguage" : "za"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Algerian Saharan Arabic" ],
     "type" : "extlang",
     "subtag" : "aao",
@@ -72698,9 +72699,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "aao",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Tajiki Arabic" ],
     "type" : "extlang",
     "subtag" : "abh",
@@ -72710,9 +72711,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "abh",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Baharna Arabic" ],
     "type" : "extlang",
     "subtag" : "abv",
@@ -72722,9 +72723,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "abv",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Mesopotamian Arabic" ],
     "type" : "extlang",
     "subtag" : "acm",
@@ -72734,9 +72735,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "acm",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Ta'izzi-Adeni Arabic" ],
     "type" : "extlang",
     "subtag" : "acq",
@@ -72746,9 +72747,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "acq",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Hijazi Arabic" ],
     "type" : "extlang",
     "subtag" : "acw",
@@ -72758,9 +72759,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "acw",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Omani Arabic" ],
     "type" : "extlang",
     "subtag" : "acx",
@@ -72770,9 +72771,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "acx",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Cypriot Arabic" ],
     "type" : "extlang",
     "subtag" : "acy",
@@ -72782,9 +72783,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "acy",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Dhofari Arabic" ],
     "type" : "extlang",
     "subtag" : "adf",
@@ -72794,9 +72795,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "adf",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Adamorobe Sign Language" ],
     "type" : "extlang",
     "subtag" : "ads",
@@ -72805,9 +72806,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "ads",
-    "prefix" : "sgn"
+    "preferred-value" : "ads"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Tunisian Arabic" ],
     "type" : "extlang",
     "subtag" : "aeb",
@@ -72817,9 +72818,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "aeb",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Saidi Arabic" ],
     "type" : "extlang",
     "subtag" : "aec",
@@ -72829,9 +72830,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "aec",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Argentine Sign Language" ],
     "type" : "extlang",
     "subtag" : "aed",
@@ -72840,9 +72841,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "aed",
-    "prefix" : "sgn"
+    "preferred-value" : "aed"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Armenian Sign Language" ],
     "type" : "extlang",
     "subtag" : "aen",
@@ -72851,9 +72852,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "aen",
-    "prefix" : "sgn"
+    "preferred-value" : "aen"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Gulf Arabic" ],
     "type" : "extlang",
     "subtag" : "afb",
@@ -72863,9 +72864,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "afb",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Afghan Sign Language" ],
     "type" : "extlang",
     "subtag" : "afg",
@@ -72874,9 +72875,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "afg",
-    "prefix" : "sgn"
+    "preferred-value" : "afg"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "South Levantine Arabic" ],
     "type" : "extlang",
     "subtag" : "ajp",
@@ -72886,9 +72887,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "ajp",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "North Levantine Arabic" ],
     "type" : "extlang",
     "subtag" : "apc",
@@ -72898,9 +72899,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "apc",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Sudanese Arabic" ],
     "type" : "extlang",
     "subtag" : "apd",
@@ -72910,9 +72911,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "apd",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Standard Arabic" ],
     "type" : "extlang",
     "subtag" : "arb",
@@ -72922,9 +72923,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "arb",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Algerian Arabic" ],
     "type" : "extlang",
     "subtag" : "arq",
@@ -72934,9 +72935,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "arq",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Najdi Arabic" ],
     "type" : "extlang",
     "subtag" : "ars",
@@ -72946,9 +72947,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "ars",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Moroccan Arabic" ],
     "type" : "extlang",
     "subtag" : "ary",
@@ -72958,9 +72959,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "ary",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Egyptian Arabic" ],
     "type" : "extlang",
     "subtag" : "arz",
@@ -72970,9 +72971,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "arz",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "American Sign Language" ],
     "type" : "extlang",
     "subtag" : "ase",
@@ -72981,9 +72982,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "ase",
-    "prefix" : "sgn"
+    "preferred-value" : "ase"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Australian Sign Language" ],
     "type" : "extlang",
     "subtag" : "asf",
@@ -72992,9 +72993,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "asf",
-    "prefix" : "sgn"
+    "preferred-value" : "asf"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Algerian Sign Language" ],
     "type" : "extlang",
     "subtag" : "asp",
@@ -73003,9 +73004,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "asp",
-    "prefix" : "sgn"
+    "preferred-value" : "asp"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Austrian Sign Language" ],
     "type" : "extlang",
     "subtag" : "asq",
@@ -73014,9 +73015,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "asq",
-    "prefix" : "sgn"
+    "preferred-value" : "asq"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Australian Aborigines Sign Language" ],
     "type" : "extlang",
     "subtag" : "asw",
@@ -73025,9 +73026,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "asw",
-    "prefix" : "sgn"
+    "preferred-value" : "asw"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Uzbeki Arabic" ],
     "type" : "extlang",
     "subtag" : "auz",
@@ -73037,9 +73038,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "auz",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Eastern Egyptian Bedawi Arabic" ],
     "type" : "extlang",
     "subtag" : "avl",
@@ -73049,9 +73050,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "avl",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Hadrami Arabic" ],
     "type" : "extlang",
     "subtag" : "ayh",
@@ -73061,9 +73062,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "ayh",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Libyan Arabic" ],
     "type" : "extlang",
     "subtag" : "ayl",
@@ -73073,9 +73074,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "ayl",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Sanaani Arabic" ],
     "type" : "extlang",
     "subtag" : "ayn",
@@ -73085,9 +73086,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "ayn",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "North Mesopotamian Arabic" ],
     "type" : "extlang",
     "subtag" : "ayp",
@@ -73097,9 +73098,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "ayp",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Babalia Creole Arabic" ],
     "type" : "extlang",
     "subtag" : "bbz",
@@ -73109,9 +73110,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "bbz",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "British Sign Language" ],
     "type" : "extlang",
     "subtag" : "bfi",
@@ -73120,9 +73121,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "bfi",
-    "prefix" : "sgn"
+    "preferred-value" : "bfi"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Ban Khor Sign Language" ],
     "type" : "extlang",
     "subtag" : "bfk",
@@ -73131,9 +73132,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "bfk",
-    "prefix" : "sgn"
+    "preferred-value" : "bfk"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Banjar" ],
     "type" : "extlang",
     "subtag" : "bjn",
@@ -73143,9 +73144,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "bjn",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Bamako Sign Language" ],
     "type" : "extlang",
     "subtag" : "bog",
@@ -73154,9 +73155,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "bog",
-    "prefix" : "sgn"
+    "preferred-value" : "bog"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Bulgarian Sign Language" ],
     "type" : "extlang",
     "subtag" : "bqn",
@@ -73165,9 +73166,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "bqn",
-    "prefix" : "sgn"
+    "preferred-value" : "bqn"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Bengkala Sign Language" ],
     "type" : "extlang",
     "subtag" : "bqy",
@@ -73176,9 +73177,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "bqy",
-    "prefix" : "sgn"
+    "preferred-value" : "bqy"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Bacanese Malay" ],
     "type" : "extlang",
     "subtag" : "btj",
@@ -73188,9 +73189,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "btj",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Berau Malay" ],
     "type" : "extlang",
     "subtag" : "bve",
@@ -73200,9 +73201,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "bve",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Bolivian Sign Language" ],
     "type" : "extlang",
     "subtag" : "bvl",
@@ -73211,9 +73212,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "bvl",
-    "prefix" : "sgn"
+    "preferred-value" : "bvl"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Bukit Malay" ],
     "type" : "extlang",
     "subtag" : "bvu",
@@ -73223,9 +73224,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "bvu",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Brazilian Sign Language" ],
     "type" : "extlang",
     "subtag" : "bzs",
@@ -73234,9 +73235,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "bzs",
-    "prefix" : "sgn"
+    "preferred-value" : "bzs"
   }, {
+    "prefix" : [ "zh" ],
     "description" : [ "Min Dong Chinese" ],
     "type" : "extlang",
     "subtag" : "cdo",
@@ -73246,9 +73247,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "cdo",
-    "prefix" : "zh",
     "macrolanguage" : "zh"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Chadian Sign Language" ],
     "type" : "extlang",
     "subtag" : "cds",
@@ -73257,9 +73258,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "cds",
-    "prefix" : "sgn"
+    "preferred-value" : "cds"
   }, {
+    "prefix" : [ "zh" ],
     "description" : [ "Jinyu Chinese" ],
     "type" : "extlang",
     "subtag" : "cjy",
@@ -73269,9 +73270,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "cjy",
-    "prefix" : "zh",
     "macrolanguage" : "zh"
   }, {
+    "prefix" : [ "zh" ],
     "description" : [ "Mandarin Chinese" ],
     "type" : "extlang",
     "subtag" : "cmn",
@@ -73281,9 +73282,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "cmn",
-    "prefix" : "zh",
     "macrolanguage" : "zh"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Cocos Islands Malay" ],
     "type" : "extlang",
     "subtag" : "coa",
@@ -73293,9 +73294,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "coa",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "zh" ],
     "description" : [ "Pu-Xian Chinese" ],
     "type" : "extlang",
     "subtag" : "cpx",
@@ -73305,9 +73306,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "cpx",
-    "prefix" : "zh",
     "macrolanguage" : "zh"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Catalan Sign Language", "Lengua de señas catalana", "Llengua de Signes Catalana" ],
     "type" : "extlang",
     "subtag" : "csc",
@@ -73316,9 +73317,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "csc",
-    "prefix" : "sgn"
+    "preferred-value" : "csc"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Chiangmai Sign Language" ],
     "type" : "extlang",
     "subtag" : "csd",
@@ -73327,9 +73328,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "csd",
-    "prefix" : "sgn"
+    "preferred-value" : "csd"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Czech Sign Language" ],
     "type" : "extlang",
     "subtag" : "cse",
@@ -73338,9 +73339,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "cse",
-    "prefix" : "sgn"
+    "preferred-value" : "cse"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Cuba Sign Language" ],
     "type" : "extlang",
     "subtag" : "csf",
@@ -73349,9 +73350,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "csf",
-    "prefix" : "sgn"
+    "preferred-value" : "csf"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Chilean Sign Language" ],
     "type" : "extlang",
     "subtag" : "csg",
@@ -73360,9 +73361,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "csg",
-    "prefix" : "sgn"
+    "preferred-value" : "csg"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Chinese Sign Language" ],
     "type" : "extlang",
     "subtag" : "csl",
@@ -73371,9 +73372,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "csl",
-    "prefix" : "sgn"
+    "preferred-value" : "csl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Colombian Sign Language" ],
     "type" : "extlang",
     "subtag" : "csn",
@@ -73382,9 +73383,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "csn",
-    "prefix" : "sgn"
+    "preferred-value" : "csn"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Croatia Sign Language" ],
     "type" : "extlang",
     "subtag" : "csq",
@@ -73393,9 +73394,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "csq",
-    "prefix" : "sgn"
+    "preferred-value" : "csq"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Costa Rican Sign Language" ],
     "type" : "extlang",
     "subtag" : "csr",
@@ -73404,9 +73405,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "csr",
-    "prefix" : "sgn"
+    "preferred-value" : "csr"
   }, {
+    "prefix" : [ "zh" ],
     "description" : [ "Huizhou Chinese" ],
     "type" : "extlang",
     "subtag" : "czh",
@@ -73416,9 +73417,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "czh",
-    "prefix" : "zh",
     "macrolanguage" : "zh"
   }, {
+    "prefix" : [ "zh" ],
     "description" : [ "Min Zhong Chinese" ],
     "type" : "extlang",
     "subtag" : "czo",
@@ -73428,9 +73429,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "czo",
-    "prefix" : "zh",
     "macrolanguage" : "zh"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Dominican Sign Language" ],
     "type" : "extlang",
     "subtag" : "doq",
@@ -73439,9 +73440,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "doq",
-    "prefix" : "sgn"
+    "preferred-value" : "doq"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Dutch Sign Language" ],
     "type" : "extlang",
     "subtag" : "dse",
@@ -73450,9 +73451,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "dse",
-    "prefix" : "sgn"
+    "preferred-value" : "dse"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Danish Sign Language" ],
     "type" : "extlang",
     "subtag" : "dsl",
@@ -73461,9 +73462,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "dsl",
-    "prefix" : "sgn"
+    "preferred-value" : "dsl"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Duano" ],
     "type" : "extlang",
     "subtag" : "dup",
@@ -73473,9 +73474,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "dup",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Ecuadorian Sign Language" ],
     "type" : "extlang",
     "subtag" : "ecs",
@@ -73484,9 +73485,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "ecs",
-    "prefix" : "sgn"
+    "preferred-value" : "ecs"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Egypt Sign Language" ],
     "type" : "extlang",
     "subtag" : "esl",
@@ -73495,9 +73496,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "esl",
-    "prefix" : "sgn"
+    "preferred-value" : "esl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Salvadoran Sign Language" ],
     "type" : "extlang",
     "subtag" : "esn",
@@ -73506,9 +73507,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "esn",
-    "prefix" : "sgn"
+    "preferred-value" : "esn"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Estonian Sign Language" ],
     "type" : "extlang",
     "subtag" : "eso",
@@ -73517,9 +73518,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "eso",
-    "prefix" : "sgn"
+    "preferred-value" : "eso"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Ethiopian Sign Language" ],
     "type" : "extlang",
     "subtag" : "eth",
@@ -73528,9 +73529,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "eth",
-    "prefix" : "sgn"
+    "preferred-value" : "eth"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Quebec Sign Language" ],
     "type" : "extlang",
     "subtag" : "fcs",
@@ -73539,9 +73540,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "fcs",
-    "prefix" : "sgn"
+    "preferred-value" : "fcs"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Finnish Sign Language" ],
     "type" : "extlang",
     "subtag" : "fse",
@@ -73550,9 +73551,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "fse",
-    "prefix" : "sgn"
+    "preferred-value" : "fse"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "French Sign Language" ],
     "type" : "extlang",
     "subtag" : "fsl",
@@ -73561,9 +73562,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "fsl",
-    "prefix" : "sgn"
+    "preferred-value" : "fsl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Finland-Swedish Sign Language", "finlandssvenskt teckenspråk", "suomenruotsalainen viittomakieli" ],
     "type" : "extlang",
     "subtag" : "fss",
@@ -73572,9 +73573,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "fss",
-    "prefix" : "sgn"
+    "preferred-value" : "fss"
   }, {
+    "prefix" : [ "zh" ],
     "description" : [ "Gan Chinese" ],
     "type" : "extlang",
     "subtag" : "gan",
@@ -73584,9 +73585,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "gan",
-    "prefix" : "zh",
     "macrolanguage" : "zh"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Ghandruk Sign Language" ],
     "type" : "extlang",
     "subtag" : "gds",
@@ -73595,9 +73596,9 @@ data = r'''
       "month" : 8,
       "day" : 12
     },
-    "preferred-value" : "gds",
-    "prefix" : "sgn"
+    "preferred-value" : "gds"
   }, {
+    "prefix" : [ "kok" ],
     "description" : [ "Goan Konkani" ],
     "type" : "extlang",
     "subtag" : "gom",
@@ -73607,9 +73608,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "gom",
-    "prefix" : "kok",
     "macrolanguage" : "kok"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Ghanaian Sign Language" ],
     "type" : "extlang",
     "subtag" : "gse",
@@ -73618,9 +73619,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "gse",
-    "prefix" : "sgn"
+    "preferred-value" : "gse"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "German Sign Language" ],
     "type" : "extlang",
     "subtag" : "gsg",
@@ -73629,9 +73630,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "gsg",
-    "prefix" : "sgn"
+    "preferred-value" : "gsg"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Guatemalan Sign Language" ],
     "type" : "extlang",
     "subtag" : "gsm",
@@ -73640,9 +73641,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "gsm",
-    "prefix" : "sgn"
+    "preferred-value" : "gsm"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Greek Sign Language" ],
     "type" : "extlang",
     "subtag" : "gss",
@@ -73651,9 +73652,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "gss",
-    "prefix" : "sgn"
+    "preferred-value" : "gss"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Guinean Sign Language" ],
     "type" : "extlang",
     "subtag" : "gus",
@@ -73662,9 +73663,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "gus",
-    "prefix" : "sgn"
+    "preferred-value" : "gus"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Hanoi Sign Language" ],
     "type" : "extlang",
     "subtag" : "hab",
@@ -73673,9 +73674,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "hab",
-    "prefix" : "sgn"
+    "preferred-value" : "hab"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Haiphong Sign Language" ],
     "type" : "extlang",
     "subtag" : "haf",
@@ -73684,9 +73685,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "haf",
-    "prefix" : "sgn"
+    "preferred-value" : "haf"
   }, {
+    "prefix" : [ "zh" ],
     "description" : [ "Hakka Chinese" ],
     "type" : "extlang",
     "subtag" : "hak",
@@ -73696,9 +73697,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "hak",
-    "prefix" : "zh",
     "macrolanguage" : "zh"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Honduras Sign Language" ],
     "type" : "extlang",
     "subtag" : "hds",
@@ -73707,9 +73708,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "hds",
-    "prefix" : "sgn"
+    "preferred-value" : "hds"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Haji" ],
     "type" : "extlang",
     "subtag" : "hji",
@@ -73719,9 +73720,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "hji",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Hong Kong Sign Language", "Heung Kong Sau Yue" ],
     "type" : "extlang",
     "subtag" : "hks",
@@ -73730,9 +73731,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "hks",
-    "prefix" : "sgn"
+    "preferred-value" : "hks"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Ho Chi Minh City Sign Language" ],
     "type" : "extlang",
     "subtag" : "hos",
@@ -73741,9 +73742,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "hos",
-    "prefix" : "sgn"
+    "preferred-value" : "hos"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Hawai'i Pidgin Sign Language" ],
     "type" : "extlang",
     "subtag" : "hps",
@@ -73752,9 +73753,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "hps",
-    "prefix" : "sgn"
+    "preferred-value" : "hps"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Hungarian Sign Language" ],
     "type" : "extlang",
     "subtag" : "hsh",
@@ -73763,9 +73764,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "hsh",
-    "prefix" : "sgn"
+    "preferred-value" : "hsh"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Hausa Sign Language" ],
     "type" : "extlang",
     "subtag" : "hsl",
@@ -73774,9 +73775,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "hsl",
-    "prefix" : "sgn"
+    "preferred-value" : "hsl"
   }, {
+    "prefix" : [ "zh" ],
     "description" : [ "Xiang Chinese" ],
     "type" : "extlang",
     "subtag" : "hsn",
@@ -73786,9 +73787,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "hsn",
-    "prefix" : "zh",
     "macrolanguage" : "zh"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Icelandic Sign Language" ],
     "type" : "extlang",
     "subtag" : "icl",
@@ -73797,9 +73798,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "icl",
-    "prefix" : "sgn"
+    "preferred-value" : "icl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "International Sign" ],
     "type" : "extlang",
     "subtag" : "ils",
@@ -73808,9 +73809,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "ils",
-    "prefix" : "sgn"
+    "preferred-value" : "ils"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Indonesian Sign Language" ],
     "type" : "extlang",
     "subtag" : "inl",
@@ -73819,9 +73820,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "inl",
-    "prefix" : "sgn"
+    "preferred-value" : "inl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Indian Sign Language" ],
     "type" : "extlang",
     "subtag" : "ins",
@@ -73830,9 +73831,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "ins",
-    "prefix" : "sgn"
+    "preferred-value" : "ins"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Italian Sign Language" ],
     "type" : "extlang",
     "subtag" : "ise",
@@ -73841,9 +73842,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "ise",
-    "prefix" : "sgn"
+    "preferred-value" : "ise"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Irish Sign Language" ],
     "type" : "extlang",
     "subtag" : "isg",
@@ -73852,9 +73853,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "isg",
-    "prefix" : "sgn"
+    "preferred-value" : "isg"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Israeli Sign Language" ],
     "type" : "extlang",
     "subtag" : "isr",
@@ -73863,9 +73864,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "isr",
-    "prefix" : "sgn"
+    "preferred-value" : "isr"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Jakun" ],
     "type" : "extlang",
     "subtag" : "jak",
@@ -73875,9 +73876,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "jak",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Jambi Malay" ],
     "type" : "extlang",
     "subtag" : "jax",
@@ -73887,9 +73888,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "jax",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Jamaican Country Sign Language" ],
     "type" : "extlang",
     "subtag" : "jcs",
@@ -73898,9 +73899,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "jcs",
-    "prefix" : "sgn"
+    "preferred-value" : "jcs"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Jhankot Sign Language" ],
     "type" : "extlang",
     "subtag" : "jhs",
@@ -73909,9 +73910,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "jhs",
-    "prefix" : "sgn"
+    "preferred-value" : "jhs"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Jamaican Sign Language" ],
     "type" : "extlang",
     "subtag" : "jls",
@@ -73920,9 +73921,9 @@ data = r'''
       "month" : 3,
       "day" : 11
     },
-    "preferred-value" : "jls",
-    "prefix" : "sgn"
+    "preferred-value" : "jls"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Jordanian Sign Language" ],
     "type" : "extlang",
     "subtag" : "jos",
@@ -73931,9 +73932,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "jos",
-    "prefix" : "sgn"
+    "preferred-value" : "jos"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Japanese Sign Language" ],
     "type" : "extlang",
     "subtag" : "jsl",
@@ -73942,9 +73943,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "jsl",
-    "prefix" : "sgn"
+    "preferred-value" : "jsl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Jumla Sign Language" ],
     "type" : "extlang",
     "subtag" : "jus",
@@ -73953,9 +73954,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "jus",
-    "prefix" : "sgn"
+    "preferred-value" : "jus"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Selangor Sign Language" ],
     "type" : "extlang",
     "subtag" : "kgi",
@@ -73964,9 +73965,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "kgi",
-    "prefix" : "sgn"
+    "preferred-value" : "kgi"
   }, {
+    "prefix" : [ "kok" ],
     "description" : [ "Konkani (individual language)" ],
     "type" : "extlang",
     "subtag" : "knn",
@@ -73976,9 +73977,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "knn",
-    "prefix" : "kok",
     "macrolanguage" : "kok"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Kubu" ],
     "type" : "extlang",
     "subtag" : "kvb",
@@ -73988,9 +73989,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "kvb",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Korean Sign Language" ],
     "type" : "extlang",
     "subtag" : "kvk",
@@ -73999,9 +74000,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "kvk",
-    "prefix" : "sgn"
+    "preferred-value" : "kvk"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Kerinci" ],
     "type" : "extlang",
     "subtag" : "kvr",
@@ -74011,9 +74012,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "kvr",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Brunei" ],
     "type" : "extlang",
     "subtag" : "kxd",
@@ -74023,9 +74024,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "kxd",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Libyan Sign Language" ],
     "type" : "extlang",
     "subtag" : "lbs",
@@ -74034,9 +74035,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "lbs",
-    "prefix" : "sgn"
+    "preferred-value" : "lbs"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Loncong" ],
     "type" : "extlang",
     "subtag" : "lce",
@@ -74046,9 +74047,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "lce",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Lubu" ],
     "type" : "extlang",
     "subtag" : "lcf",
@@ -74058,9 +74059,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "lcf",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Col" ],
     "type" : "extlang",
     "subtag" : "liw",
@@ -74070,9 +74071,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "liw",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Lithuanian Sign Language" ],
     "type" : "extlang",
     "subtag" : "lls",
@@ -74081,9 +74082,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "lls",
-    "prefix" : "sgn"
+    "preferred-value" : "lls"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Lyons Sign Language" ],
     "type" : "extlang",
     "subtag" : "lsg",
@@ -74092,9 +74093,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "lsg",
-    "prefix" : "sgn"
+    "preferred-value" : "lsg"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Latvian Sign Language" ],
     "type" : "extlang",
     "subtag" : "lsl",
@@ -74103,9 +74104,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "lsl",
-    "prefix" : "sgn"
+    "preferred-value" : "lsl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Laos Sign Language" ],
     "type" : "extlang",
     "subtag" : "lso",
@@ -74114,9 +74115,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "lso",
-    "prefix" : "sgn"
+    "preferred-value" : "lso"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Panamanian Sign Language", "Lengua de Señas Panameñas" ],
     "type" : "extlang",
     "subtag" : "lsp",
@@ -74125,9 +74126,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "lsp",
-    "prefix" : "sgn"
+    "preferred-value" : "lsp"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Trinidad and Tobago Sign Language" ],
     "type" : "extlang",
     "subtag" : "lst",
@@ -74136,9 +74137,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "lst",
-    "prefix" : "sgn"
+    "preferred-value" : "lst"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Mauritian Sign Language" ],
     "type" : "extlang",
     "subtag" : "lsy",
@@ -74147,9 +74148,9 @@ data = r'''
       "month" : 3,
       "day" : 11
     },
-    "preferred-value" : "lsy",
-    "prefix" : "sgn"
+    "preferred-value" : "lsy"
   }, {
+    "prefix" : [ "lv" ],
     "description" : [ "Latgalian" ],
     "type" : "extlang",
     "subtag" : "ltg",
@@ -74159,9 +74160,9 @@ data = r'''
       "day" : 11
     },
     "preferred-value" : "ltg",
-    "prefix" : "lv",
     "macrolanguage" : "lv"
   }, {
+    "prefix" : [ "lv" ],
     "description" : [ "Standard Latvian" ],
     "type" : "extlang",
     "subtag" : "lvs",
@@ -74171,9 +74172,9 @@ data = r'''
       "day" : 11
     },
     "preferred-value" : "lvs",
-    "prefix" : "lv",
     "macrolanguage" : "lv"
   }, {
+    "prefix" : [ "zh" ],
     "description" : [ "Literary Chinese" ],
     "type" : "extlang",
     "subtag" : "lzh",
@@ -74183,9 +74184,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "lzh",
-    "prefix" : "zh",
     "macrolanguage" : "zh"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "North Moluccan Malay" ],
     "type" : "extlang",
     "subtag" : "max",
@@ -74195,9 +74196,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "max",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Maltese Sign Language" ],
     "type" : "extlang",
     "subtag" : "mdl",
@@ -74206,9 +74207,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "mdl",
-    "prefix" : "sgn"
+    "preferred-value" : "mdl"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Kedah Malay" ],
     "type" : "extlang",
     "subtag" : "meo",
@@ -74218,9 +74219,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "meo",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Pattani Malay" ],
     "type" : "extlang",
     "subtag" : "mfa",
@@ -74230,9 +74231,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "mfa",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Bangka" ],
     "type" : "extlang",
     "subtag" : "mfb",
@@ -74242,9 +74243,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "mfb",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Mexican Sign Language" ],
     "type" : "extlang",
     "subtag" : "mfs",
@@ -74253,9 +74254,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "mfs",
-    "prefix" : "sgn"
+    "preferred-value" : "mfs"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Minangkabau" ],
     "type" : "extlang",
     "subtag" : "min",
@@ -74265,9 +74266,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "min",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "zh" ],
     "description" : [ "Min Bei Chinese" ],
     "type" : "extlang",
     "subtag" : "mnp",
@@ -74277,9 +74278,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "mnp",
-    "prefix" : "zh",
     "macrolanguage" : "zh"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Kota Bangun Kutai Malay" ],
     "type" : "extlang",
     "subtag" : "mqg",
@@ -74289,9 +74290,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "mqg",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Martha's Vineyard Sign Language" ],
     "type" : "extlang",
     "subtag" : "mre",
@@ -74300,9 +74301,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "mre",
-    "prefix" : "sgn"
+    "preferred-value" : "mre"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Yucatec Maya Sign Language" ],
     "type" : "extlang",
     "subtag" : "msd",
@@ -74311,9 +74312,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "msd",
-    "prefix" : "sgn"
+    "preferred-value" : "msd"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Sabah Malay" ],
     "type" : "extlang",
     "subtag" : "msi",
@@ -74323,9 +74324,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "msi",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Mongolian Sign Language" ],
     "type" : "extlang",
     "subtag" : "msr",
@@ -74334,9 +74335,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "msr",
-    "prefix" : "sgn"
+    "preferred-value" : "msr"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Musi" ],
     "type" : "extlang",
     "subtag" : "mui",
@@ -74346,9 +74347,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "mui",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Madagascar Sign Language" ],
     "type" : "extlang",
     "subtag" : "mzc",
@@ -74357,9 +74358,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "mzc",
-    "prefix" : "sgn"
+    "preferred-value" : "mzc"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Monastic Sign Language" ],
     "type" : "extlang",
     "subtag" : "mzg",
@@ -74368,9 +74369,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "mzg",
-    "prefix" : "sgn"
+    "preferred-value" : "mzg"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Mozambican Sign Language" ],
     "type" : "extlang",
     "subtag" : "mzy",
@@ -74379,9 +74380,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "mzy",
-    "prefix" : "sgn"
+    "preferred-value" : "mzy"
   }, {
+    "prefix" : [ "zh" ],
     "description" : [ "Min Nan Chinese" ],
     "type" : "extlang",
     "subtag" : "nan",
@@ -74391,9 +74392,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "nan",
-    "prefix" : "zh",
     "macrolanguage" : "zh"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Namibian Sign Language" ],
     "type" : "extlang",
     "subtag" : "nbs",
@@ -74402,9 +74403,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "nbs",
-    "prefix" : "sgn"
+    "preferred-value" : "nbs"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Nicaraguan Sign Language" ],
     "type" : "extlang",
     "subtag" : "ncs",
@@ -74413,9 +74414,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "ncs",
-    "prefix" : "sgn"
+    "preferred-value" : "ncs"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Nigerian Sign Language" ],
     "type" : "extlang",
     "subtag" : "nsi",
@@ -74424,9 +74425,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "nsi",
-    "prefix" : "sgn"
+    "preferred-value" : "nsi"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Norwegian Sign Language" ],
     "type" : "extlang",
     "subtag" : "nsl",
@@ -74435,9 +74436,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "nsl",
-    "prefix" : "sgn"
+    "preferred-value" : "nsl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Nepalese Sign Language" ],
     "type" : "extlang",
     "subtag" : "nsp",
@@ -74446,9 +74447,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "nsp",
-    "prefix" : "sgn"
+    "preferred-value" : "nsp"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Maritime Sign Language" ],
     "type" : "extlang",
     "subtag" : "nsr",
@@ -74457,9 +74458,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "nsr",
-    "prefix" : "sgn"
+    "preferred-value" : "nsr"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "New Zealand Sign Language" ],
     "type" : "extlang",
     "subtag" : "nzs",
@@ -74468,9 +74469,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "nzs",
-    "prefix" : "sgn"
+    "preferred-value" : "nzs"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Old Kentish Sign Language" ],
     "type" : "extlang",
     "subtag" : "okl",
@@ -74479,9 +74480,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "okl",
-    "prefix" : "sgn"
+    "preferred-value" : "okl"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Orang Kanaq" ],
     "type" : "extlang",
     "subtag" : "orn",
@@ -74491,9 +74492,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "orn",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Orang Seletar" ],
     "type" : "extlang",
     "subtag" : "ors",
@@ -74503,9 +74504,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "ors",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Pekal" ],
     "type" : "extlang",
     "subtag" : "pel",
@@ -74515,9 +74516,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "pel",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Sudanese Creole Arabic" ],
     "type" : "extlang",
     "subtag" : "pga",
@@ -74527,9 +74528,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "pga",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Pakistan Sign Language" ],
     "type" : "extlang",
     "subtag" : "pks",
@@ -74538,9 +74539,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "pks",
-    "prefix" : "sgn"
+    "preferred-value" : "pks"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Peruvian Sign Language" ],
     "type" : "extlang",
     "subtag" : "prl",
@@ -74549,9 +74550,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "prl",
-    "prefix" : "sgn"
+    "preferred-value" : "prl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Providencia Sign Language" ],
     "type" : "extlang",
     "subtag" : "prz",
@@ -74560,9 +74561,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "prz",
-    "prefix" : "sgn"
+    "preferred-value" : "prz"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Persian Sign Language" ],
     "type" : "extlang",
     "subtag" : "psc",
@@ -74571,9 +74572,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "psc",
-    "prefix" : "sgn"
+    "preferred-value" : "psc"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Plains Indian Sign Language" ],
     "type" : "extlang",
     "subtag" : "psd",
@@ -74582,9 +74583,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "psd",
-    "prefix" : "sgn"
+    "preferred-value" : "psd"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Central Malay" ],
     "type" : "extlang",
     "subtag" : "pse",
@@ -74594,9 +74595,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "pse",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Penang Sign Language" ],
     "type" : "extlang",
     "subtag" : "psg",
@@ -74605,9 +74606,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "psg",
-    "prefix" : "sgn"
+    "preferred-value" : "psg"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Puerto Rican Sign Language" ],
     "type" : "extlang",
     "subtag" : "psl",
@@ -74616,9 +74617,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "psl",
-    "prefix" : "sgn"
+    "preferred-value" : "psl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Polish Sign Language" ],
     "type" : "extlang",
     "subtag" : "pso",
@@ -74627,9 +74628,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "pso",
-    "prefix" : "sgn"
+    "preferred-value" : "pso"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Philippine Sign Language" ],
     "type" : "extlang",
     "subtag" : "psp",
@@ -74638,9 +74639,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "psp",
-    "prefix" : "sgn"
+    "preferred-value" : "psp"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Portuguese Sign Language" ],
     "type" : "extlang",
     "subtag" : "psr",
@@ -74649,9 +74650,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "psr",
-    "prefix" : "sgn"
+    "preferred-value" : "psr"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Paraguayan Sign Language", "Lengua de Señas del Paraguay" ],
     "type" : "extlang",
     "subtag" : "pys",
@@ -74660,9 +74661,9 @@ data = r'''
       "month" : 3,
       "day" : 11
     },
-    "preferred-value" : "pys",
-    "prefix" : "sgn"
+    "preferred-value" : "pys"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Romanian Sign Language" ],
     "type" : "extlang",
     "subtag" : "rms",
@@ -74671,9 +74672,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "rms",
-    "prefix" : "sgn"
+    "preferred-value" : "rms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Rennellese Sign Language" ],
     "type" : "extlang",
     "subtag" : "rsi",
@@ -74682,9 +74683,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "rsi",
-    "prefix" : "sgn"
+    "preferred-value" : "rsi"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Russian Sign Language" ],
     "type" : "extlang",
     "subtag" : "rsl",
@@ -74693,9 +74694,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "rsl",
-    "prefix" : "sgn"
+    "preferred-value" : "rsl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Saudi Arabian Sign Language" ],
     "type" : "extlang",
     "subtag" : "sdl",
@@ -74704,9 +74705,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "sdl",
-    "prefix" : "sgn"
+    "preferred-value" : "sdl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Langue des signes de Belgique Francophone", "French Belgian Sign Language" ],
     "type" : "extlang",
     "subtag" : "sfb",
@@ -74715,9 +74716,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "sfb",
-    "prefix" : "sgn"
+    "preferred-value" : "sfb"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "South African Sign Language" ],
     "type" : "extlang",
     "subtag" : "sfs",
@@ -74726,9 +74727,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "sfs",
-    "prefix" : "sgn"
+    "preferred-value" : "sfs"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Swiss-German Sign Language" ],
     "type" : "extlang",
     "subtag" : "sgg",
@@ -74737,9 +74738,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "sgg",
-    "prefix" : "sgn"
+    "preferred-value" : "sgg"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Sierra Leone Sign Language" ],
     "type" : "extlang",
     "subtag" : "sgx",
@@ -74748,9 +74749,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "sgx",
-    "prefix" : "sgn"
+    "preferred-value" : "sgx"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Chadian Arabic" ],
     "type" : "extlang",
     "subtag" : "shu",
@@ -74760,9 +74761,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "shu",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Swiss-Italian Sign Language" ],
     "type" : "extlang",
     "subtag" : "slf",
@@ -74771,9 +74772,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "slf",
-    "prefix" : "sgn"
+    "preferred-value" : "slf"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Singapore Sign Language" ],
     "type" : "extlang",
     "subtag" : "sls",
@@ -74782,9 +74783,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "sls",
-    "prefix" : "sgn"
+    "preferred-value" : "sls"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Albanian Sign Language" ],
     "type" : "extlang",
     "subtag" : "sqk",
@@ -74793,9 +74794,9 @@ data = r'''
       "month" : 8,
       "day" : 12
     },
-    "preferred-value" : "sqk",
-    "prefix" : "sgn"
+    "preferred-value" : "sqk"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Sri Lankan Sign Language" ],
     "type" : "extlang",
     "subtag" : "sqs",
@@ -74804,9 +74805,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "sqs",
-    "prefix" : "sgn"
+    "preferred-value" : "sqs"
   }, {
+    "prefix" : [ "ar" ],
     "description" : [ "Shihhi Arabic" ],
     "type" : "extlang",
     "subtag" : "ssh",
@@ -74816,9 +74817,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "ssh",
-    "prefix" : "ar",
     "macrolanguage" : "ar"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Spanish Sign Language" ],
     "type" : "extlang",
     "subtag" : "ssp",
@@ -74827,9 +74828,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "ssp",
-    "prefix" : "sgn"
+    "preferred-value" : "ssp"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Swiss-French Sign Language" ],
     "type" : "extlang",
     "subtag" : "ssr",
@@ -74838,9 +74839,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "ssr",
-    "prefix" : "sgn"
+    "preferred-value" : "ssr"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Slovakian Sign Language" ],
     "type" : "extlang",
     "subtag" : "svk",
@@ -74849,9 +74850,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "svk",
-    "prefix" : "sgn"
+    "preferred-value" : "svk"
   }, {
+    "prefix" : [ "sw" ],
     "description" : [ "Congo Swahili" ],
     "type" : "extlang",
     "subtag" : "swc",
@@ -74861,9 +74862,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "swc",
-    "prefix" : "sw",
     "macrolanguage" : "sw"
   }, {
+    "prefix" : [ "sw" ],
     "description" : [ "Swahili (individual language)", "Kiswahili" ],
     "type" : "extlang",
     "subtag" : "swh",
@@ -74873,9 +74874,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "swh",
-    "prefix" : "sw",
     "macrolanguage" : "sw"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Swedish Sign Language" ],
     "type" : "extlang",
     "subtag" : "swl",
@@ -74884,9 +74885,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "swl",
-    "prefix" : "sgn"
+    "preferred-value" : "swl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Al-Sayyid Bedouin Sign Language" ],
     "type" : "extlang",
     "subtag" : "syy",
@@ -74895,9 +74896,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "syy",
-    "prefix" : "sgn"
+    "preferred-value" : "syy"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Temuan" ],
     "type" : "extlang",
     "subtag" : "tmw",
@@ -74907,9 +74908,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "tmw",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Tunisian Sign Language" ],
     "type" : "extlang",
     "subtag" : "tse",
@@ -74918,9 +74919,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "tse",
-    "prefix" : "sgn"
+    "preferred-value" : "tse"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Turkish Sign Language", "Türk İşaret Dili" ],
     "type" : "extlang",
     "subtag" : "tsm",
@@ -74929,9 +74930,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "tsm",
-    "prefix" : "sgn"
+    "preferred-value" : "tsm"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Thai Sign Language" ],
     "type" : "extlang",
     "subtag" : "tsq",
@@ -74940,9 +74941,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "tsq",
-    "prefix" : "sgn"
+    "preferred-value" : "tsq"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Taiwan Sign Language" ],
     "type" : "extlang",
     "subtag" : "tss",
@@ -74951,9 +74952,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "tss",
-    "prefix" : "sgn"
+    "preferred-value" : "tss"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Tebul Sign Language" ],
     "type" : "extlang",
     "subtag" : "tsy",
@@ -74962,9 +74963,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "tsy",
-    "prefix" : "sgn"
+    "preferred-value" : "tsy"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Tanzanian Sign Language" ],
     "type" : "extlang",
     "subtag" : "tza",
@@ -74973,9 +74974,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "tza",
-    "prefix" : "sgn"
+    "preferred-value" : "tza"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Ugandan Sign Language" ],
     "type" : "extlang",
     "subtag" : "ugn",
@@ -74984,9 +74985,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "ugn",
-    "prefix" : "sgn"
+    "preferred-value" : "ugn"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Uruguayan Sign Language" ],
     "type" : "extlang",
     "subtag" : "ugy",
@@ -74995,9 +74996,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "ugy",
-    "prefix" : "sgn"
+    "preferred-value" : "ugy"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Ukrainian Sign Language" ],
     "type" : "extlang",
     "subtag" : "ukl",
@@ -75006,9 +75007,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "ukl",
-    "prefix" : "sgn"
+    "preferred-value" : "ukl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Urubú-Kaapor Sign Language", "Kaapor Sign Language" ],
     "type" : "extlang",
     "subtag" : "uks",
@@ -75017,9 +75018,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "uks",
-    "prefix" : "sgn"
+    "preferred-value" : "uks"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Urak Lawoi'" ],
     "type" : "extlang",
     "subtag" : "urk",
@@ -75029,9 +75030,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "urk",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "uz" ],
     "description" : [ "Northern Uzbek" ],
     "type" : "extlang",
     "subtag" : "uzn",
@@ -75041,9 +75042,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "uzn",
-    "prefix" : "uz",
     "macrolanguage" : "uz"
   }, {
+    "prefix" : [ "uz" ],
     "description" : [ "Southern Uzbek" ],
     "type" : "extlang",
     "subtag" : "uzs",
@@ -75053,9 +75054,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "uzs",
-    "prefix" : "uz",
     "macrolanguage" : "uz"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Vlaamse Gebarentaal", "Flemish Sign Language" ],
     "type" : "extlang",
     "subtag" : "vgt",
@@ -75064,9 +75065,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "vgt",
-    "prefix" : "sgn"
+    "preferred-value" : "vgt"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Kaur" ],
     "type" : "extlang",
     "subtag" : "vkk",
@@ -75076,9 +75077,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "vkk",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Tenggarong Kutai Malay" ],
     "type" : "extlang",
     "subtag" : "vkt",
@@ -75088,9 +75089,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "vkt",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Moldova Sign Language" ],
     "type" : "extlang",
     "subtag" : "vsi",
@@ -75099,9 +75100,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "vsi",
-    "prefix" : "sgn"
+    "preferred-value" : "vsi"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Venezuelan Sign Language" ],
     "type" : "extlang",
     "subtag" : "vsl",
@@ -75110,9 +75111,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "vsl",
-    "prefix" : "sgn"
+    "preferred-value" : "vsl"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Valencian Sign Language", "Llengua de signes valenciana" ],
     "type" : "extlang",
     "subtag" : "vsv",
@@ -75121,9 +75122,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "vsv",
-    "prefix" : "sgn"
+    "preferred-value" : "vsv"
   }, {
+    "prefix" : [ "zh" ],
     "description" : [ "Wu Chinese" ],
     "type" : "extlang",
     "subtag" : "wuu",
@@ -75133,9 +75134,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "wuu",
-    "prefix" : "zh",
     "macrolanguage" : "zh"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Kenyan Sign Language" ],
     "type" : "extlang",
     "subtag" : "xki",
@@ -75144,9 +75145,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "xki",
-    "prefix" : "sgn"
+    "preferred-value" : "xki"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Malaysian Sign Language" ],
     "type" : "extlang",
     "subtag" : "xml",
@@ -75155,9 +75156,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "xml",
-    "prefix" : "sgn"
+    "preferred-value" : "xml"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Manado Malay" ],
     "type" : "extlang",
     "subtag" : "xmm",
@@ -75167,9 +75168,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "xmm",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Moroccan Sign Language" ],
     "type" : "extlang",
     "subtag" : "xms",
@@ -75178,9 +75179,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "xms",
-    "prefix" : "sgn"
+    "preferred-value" : "xms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Yiddish Sign Language" ],
     "type" : "extlang",
     "subtag" : "yds",
@@ -75189,9 +75190,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "yds",
-    "prefix" : "sgn"
+    "preferred-value" : "yds"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Yugoslavian Sign Language" ],
     "type" : "extlang",
     "subtag" : "ysl",
@@ -75200,9 +75201,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "ysl",
-    "prefix" : "sgn"
+    "preferred-value" : "ysl"
   }, {
+    "prefix" : [ "zh" ],
     "description" : [ "Yue Chinese" ],
     "type" : "extlang",
     "subtag" : "yue",
@@ -75212,9 +75213,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "yue",
-    "prefix" : "zh",
     "macrolanguage" : "zh"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Zimbabwe Sign Language" ],
     "type" : "extlang",
     "subtag" : "zib",
@@ -75223,9 +75224,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "zib",
-    "prefix" : "sgn"
+    "preferred-value" : "zib"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Malay (individual language)" ],
     "type" : "extlang",
     "subtag" : "zlm",
@@ -75235,9 +75236,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "zlm",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Negeri Sembilan Malay" ],
     "type" : "extlang",
     "subtag" : "zmi",
@@ -75247,9 +75248,9 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "zmi",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
+    "prefix" : [ "sgn" ],
     "description" : [ "Zambian Sign Language" ],
     "type" : "extlang",
     "subtag" : "zsl",
@@ -75258,9 +75259,9 @@ data = r'''
       "month" : 7,
       "day" : 29
     },
-    "preferred-value" : "zsl",
-    "prefix" : "sgn"
+    "preferred-value" : "zsl"
   }, {
+    "prefix" : [ "ms" ],
     "description" : [ "Standard Malay" ],
     "type" : "extlang",
     "subtag" : "zsm",
@@ -75270,7 +75271,6 @@ data = r'''
       "day" : 29
     },
     "preferred-value" : "zsm",
-    "prefix" : "ms",
     "macrolanguage" : "ms"
   }, {
     "description" : [ "Afaka" ],
@@ -79490,6 +79490,7 @@ data = r'''
       "day" : 16
     }
   }, {
+    "prefix" : [ "frm" ],
     "description" : [ "Late Middle French (to 1606)" ],
     "type" : "variant",
     "subtag" : "1606nict",
@@ -79498,9 +79499,9 @@ data = r'''
       "month" : 3,
       "day" : 20
     },
-    "prefix" : "frm",
     "comments" : "16th century French as in Jean Nicot, \"Thresor de la langue francoyse\", 1606, but also including some French similar to that of Rabelais"
   }, {
+    "prefix" : [ "fr" ],
     "description" : [ "Early Modern French" ],
     "type" : "variant",
     "subtag" : "1694acad",
@@ -79509,9 +79510,9 @@ data = r'''
       "month" : 3,
       "day" : 20
     },
-    "prefix" : "fr",
     "comments" : "17th century French, as catalogued in the \"Dictionnaire de l'académie françoise\", 4eme ed. 1694; frequently includes elements of Middle French, as this is a transitional period"
   }, {
+    "prefix" : [ "de" ],
     "description" : [ "Traditional German orthography" ],
     "type" : "variant",
     "subtag" : "1901",
@@ -79519,9 +79520,9 @@ data = r'''
       "year" : 2005,
       "month" : 10,
       "day" : 16
-    },
-    "prefix" : "de"
+    }
   }, {
+    "prefix" : [ "be" ],
     "description" : [ "\"Academic\" (\"governmental\") variant of Belarusian as codified in 1959" ],
     "type" : "variant",
     "subtag" : "1959acad",
@@ -79529,9 +79530,9 @@ data = r'''
       "year" : 2008,
       "month" : 9,
       "day" : 30
-    },
-    "prefix" : "be"
+    }
   }, {
+    "prefix" : [ "sl-rozaj", "sl-rozaj-biske", "sl-rozaj-njiva", "sl-rozaj-osojs", "sl-rozaj-solba" ],
     "description" : [ "Standardized Resian orthography" ],
     "type" : "variant",
     "subtag" : "1994",
@@ -79540,9 +79541,9 @@ data = r'''
       "month" : 7,
       "day" : 28
     },
-    "prefix" : "sl-rozaj-solba",
     "comments" : "For standardized Resian an orthography was published in 1994."
   }, {
+    "prefix" : [ "de" ],
     "description" : [ "German orthography of 1996" ],
     "type" : "variant",
     "subtag" : "1996",
@@ -79550,8 +79551,7 @@ data = r'''
       "year" : 2005,
       "month" : 10,
       "day" : 16
-    },
-    "prefix" : "de"
+    }
   }, {
     "description" : [ "ALA-LC Romanization, 1997 edition" ],
     "type" : "variant",
@@ -79563,6 +79563,7 @@ data = r'''
     },
     "comments" : "Romanizations recommended by the American Library Association and the Library of Congress, in \"ALA-LC Romanization Tables: Transliteration Schemes for Non-Roman Scripts\" (1997), ISBN 978-0-8444-0940-5."
   }, {
+    "prefix" : [ "djk" ],
     "description" : [ "Aluku dialect", "Boni dialect" ],
     "type" : "variant",
     "subtag" : "aluku",
@@ -79571,9 +79572,9 @@ data = r'''
       "month" : 9,
       "day" : 5
     },
-    "prefix" : "djk",
     "comments" : "Aluku dialect of the \"Busi Nenge Tongo\" English-based Creole continuum in Eastern Suriname and Western French Guiana"
   }, {
+    "prefix" : [ "hy" ],
     "description" : [ "Eastern Armenian" ],
     "type" : "variant",
     "subtag" : "arevela",
@@ -79581,9 +79582,9 @@ data = r'''
       "year" : 2006,
       "month" : 9,
       "day" : 18
-    },
-    "prefix" : "hy"
+    }
   }, {
+    "prefix" : [ "hy" ],
     "description" : [ "Western Armenian" ],
     "type" : "variant",
     "subtag" : "arevmda",
@@ -79591,9 +79592,9 @@ data = r'''
       "year" : 2006,
       "month" : 9,
       "day" : 18
-    },
-    "prefix" : "hy"
+    }
   }, {
+    "prefix" : [ "az", "ba", "crh", "kk", "krc", "ky", "sah", "tk", "tt", "uz" ],
     "description" : [ "Unified Turkic Latin Alphabet (Historical)" ],
     "type" : "variant",
     "subtag" : "baku1926",
@@ -79602,9 +79603,9 @@ data = r'''
       "month" : 4,
       "day" : 18
     },
-    "prefix" : "uz",
     "comments" : "Denotes alphabet used in Turkic republics/regions of the former USSR in late 1920s, and throughout 1930s, which aspired to represent equivalent phonemes in a unified fashion. Also known as: New Turkic Alphabet; Birlәşdirilmiş Jeni Tyrk Әlifbasь (Birlesdirilmis Jeni Tyrk Elifbasi); Jaŋalif (Janalif)."
   }, {
+    "prefix" : [ "sa" ],
     "description" : [ "Buddhist Hybrid Sanskrit" ],
     "type" : "variant",
     "subtag" : "bauddha",
@@ -79612,9 +79613,9 @@ data = r'''
       "year" : 2010,
       "month" : 7,
       "day" : 28
-    },
-    "prefix" : "sa"
+    }
   }, {
+    "prefix" : [ "eu" ],
     "description" : [ "Biscayan dialect of Basque" ],
     "type" : "variant",
     "subtag" : "biscayan",
@@ -79622,9 +79623,9 @@ data = r'''
       "year" : 2010,
       "month" : 4,
       "day" : 13
-    },
-    "prefix" : "eu"
+    }
   }, {
+    "prefix" : [ "sl-rozaj" ],
     "description" : [ "The San Giorgio dialect of Resian", "The Bila dialect of Resian" ],
     "type" : "variant",
     "subtag" : "biske",
@@ -79633,9 +79634,9 @@ data = r'''
       "month" : 7,
       "day" : 5
     },
-    "prefix" : "sl-rozaj",
     "comments" : "The dialect of San Giorgio/Bila is one of the four major local dialects of Resian"
   }, {
+    "prefix" : [ "sl" ],
     "description" : [ "Slovene in Bohorič alphabet" ],
     "type" : "variant",
     "subtag" : "bohoric",
@@ -79644,9 +79645,9 @@ data = r'''
       "month" : 6,
       "day" : 27
     },
-    "prefix" : "sl",
     "comments" : "The subtag represents the alphabet codified by Adam Bohorič in 1584 and used from the first printed Slovene book and up to the mid- 19th century."
   }, {
+    "prefix" : [ "en" ],
     "description" : [ "Boontling" ],
     "type" : "variant",
     "subtag" : "boont",
@@ -79655,9 +79656,9 @@ data = r'''
       "month" : 9,
       "day" : 18
     },
-    "prefix" : "en",
     "comments" : "Jargon embedded in American English"
   }, {
+    "prefix" : [ "sl" ],
     "description" : [ "Slovene in Dajnko alphabet" ],
     "type" : "variant",
     "subtag" : "dajnko",
@@ -79666,9 +79667,9 @@ data = r'''
       "month" : 6,
       "day" : 27
     },
-    "prefix" : "sl",
     "comments" : "The subtag represents the alphabet codified by Peter Dajnko and used from 1824 to 1839 mostly in Styria (in what is now Eastern Slovenia)."
   }, {
+    "prefix" : [ "en" ],
     "description" : [ "Early Modern English (1500-1700)" ],
     "type" : "variant",
     "subtag" : "emodeng",
@@ -79676,8 +79677,7 @@ data = r'''
       "year" : 2012,
       "month" : 2,
       "day" : 5
-    },
-    "prefix" : "en"
+    }
   }, {
     "description" : [ "International Phonetic Alphabet" ],
     "type" : "variant",
@@ -79707,6 +79707,7 @@ data = r'''
     },
     "comments" : "Indicates that the content is transcribed according to X-SAMPA"
   }, {
+    "prefix" : [ "ja-Latn" ],
     "description" : [ "Hepburn romanization" ],
     "type" : "variant",
     "subtag" : "hepburn",
@@ -79714,9 +79715,9 @@ data = r'''
       "year" : 2009,
       "month" : 10,
       "day" : 1
-    },
-    "prefix" : "ja-Latn"
+    }
   }, {
+    "prefix" : [ "ja-Latn-hepburn" ],
     "description" : [ "Hepburn romanization, Library of Congress method" ],
     "type" : "variant",
     "subtag" : "heploc",
@@ -79731,9 +79732,9 @@ data = r'''
       "day" : 7
     },
     "preferred-value" : "alalc97",
-    "prefix" : "ja-Latn-hepburn",
     "comments" : "Preferred tag is ja-Latn-alalc97"
   }, {
+    "prefix" : [ "nn" ],
     "description" : [ "Norwegian in Høgnorsk (High Norwegian) orthography" ],
     "type" : "variant",
     "subtag" : "hognorsk",
@@ -79742,9 +79743,9 @@ data = r'''
       "month" : 1,
       "day" : 2
     },
-    "prefix" : "nn",
     "comments" : "Norwegian following Ivar Aasen's orthographical principles, including modern usage."
   }, {
+    "prefix" : [ "sa" ],
     "description" : [ "Epic Sanskrit" ],
     "type" : "variant",
     "subtag" : "itihasa",
@@ -79752,9 +79753,9 @@ data = r'''
       "year" : 2010,
       "month" : 7,
       "day" : 28
-    },
-    "prefix" : "sa"
+    }
   }, {
+    "prefix" : [ "rm" ],
     "description" : [ "Jauer dialect of Romansh" ],
     "type" : "variant",
     "subtag" : "jauer",
@@ -79763,9 +79764,9 @@ data = r'''
       "month" : 6,
       "day" : 29
     },
-    "prefix" : "rm",
     "comments" : "The spoken dialect of the Val Müstair, which has no written standard."
   }, {
+    "prefix" : [ "yue" ],
     "description" : [ "Jyutping Cantonese Romanization" ],
     "type" : "variant",
     "subtag" : "jyutping",
@@ -79774,9 +79775,9 @@ data = r'''
       "month" : 10,
       "day" : 23
     },
-    "prefix" : "yue",
     "comments" : "Jyutping romanization of Cantonese"
   }, {
+    "prefix" : [ "kw" ],
     "description" : [ "Common Cornish orthography of Revived Cornish" ],
     "type" : "variant",
     "subtag" : "kkcor",
@@ -79784,9 +79785,9 @@ data = r'''
       "year" : 2008,
       "month" : 10,
       "day" : 14
-    },
-    "prefix" : "kw"
+    }
   }, {
+    "prefix" : [ "kw" ],
     "description" : [ "Standard Cornish orthography of Revived Cornish", "Kernowek Standard" ],
     "type" : "variant",
     "subtag" : "kscor",
@@ -79794,9 +79795,9 @@ data = r'''
       "year" : 2012,
       "month" : 6,
       "day" : 27
-    },
-    "prefix" : "kw"
+    }
   }, {
+    "prefix" : [ "sa" ],
     "description" : [ "Classical Sanskrit" ],
     "type" : "variant",
     "subtag" : "laukika",
@@ -79804,9 +79805,9 @@ data = r'''
       "year" : 2010,
       "month" : 7,
       "day" : 28
-    },
-    "prefix" : "sa"
+    }
   }, {
+    "prefix" : [ "sl-rozaj" ],
     "description" : [ "The Lipovaz dialect of Resian", "The Lipovec dialect of Resian" ],
     "type" : "variant",
     "subtag" : "lipaw",
@@ -79815,9 +79816,9 @@ data = r'''
       "month" : 8,
       "day" : 11
     },
-    "prefix" : "sl-rozaj",
     "comments" : "The dialect of Lipovaz/Lipovec is one of the minor local dialects of Resian"
   }, {
+    "prefix" : [ "ru" ],
     "description" : [ "Post-1917 Russian orthography" ],
     "type" : "variant",
     "subtag" : "luna1918",
@@ -79826,9 +79827,9 @@ data = r'''
       "month" : 10,
       "day" : 10
     },
-    "prefix" : "ru",
     "comments" : "Russian orthography as established by the 1917/1918 orthographic reforms"
   }, {
+    "prefix" : [ "sl" ],
     "description" : [ "Slovene in Metelko alphabet" ],
     "type" : "variant",
     "subtag" : "metelko",
@@ -79837,9 +79838,9 @@ data = r'''
       "month" : 6,
       "day" : 27
     },
-    "prefix" : "sl",
     "comments" : "The subtag represents the alphabet codified by Franc Serafin Metelko and used from 1825 to 1833."
   }, {
+    "prefix" : [ "el" ],
     "description" : [ "Monotonic Greek" ],
     "type" : "variant",
     "subtag" : "monoton",
@@ -79847,9 +79848,9 @@ data = r'''
       "year" : 2006,
       "month" : 12,
       "day" : 11
-    },
-    "prefix" : "el"
+    }
   }, {
+    "prefix" : [ "djk" ],
     "description" : [ "Ndyuka dialect", "Aukan dialect" ],
     "type" : "variant",
     "subtag" : "ndyuka",
@@ -79858,9 +79859,9 @@ data = r'''
       "month" : 9,
       "day" : 5
     },
-    "prefix" : "djk",
     "comments" : "Ndyuka dialect of the \"Busi Nenge Tongo\" English-based Creole continuum in Eastern Suriname and Western French Guiana"
   }, {
+    "prefix" : [ "sl" ],
     "description" : [ "Natisone dialect", "Nadiza dialect" ],
     "type" : "variant",
     "subtag" : "nedis",
@@ -79868,9 +79869,9 @@ data = r'''
       "year" : 2005,
       "month" : 10,
       "day" : 16
-    },
-    "prefix" : "sl"
+    }
   }, {
+    "prefix" : [ "sl-rozaj" ],
     "description" : [ "The Gniva dialect of Resian", "The Njiva dialect of Resian" ],
     "type" : "variant",
     "subtag" : "njiva",
@@ -79879,9 +79880,9 @@ data = r'''
       "month" : 7,
       "day" : 5
     },
-    "prefix" : "sl-rozaj",
     "comments" : "The dialect of Gniva/Njiva is one of the four major local dialects of Resian"
   }, {
+    "prefix" : [ "vo" ],
     "description" : [ "Volapük nulik", "Volapük perevidöl", "Volapük nulädik", "de Jong's Volapük", "New Volapük", "Revised Volapük", "Modern Volapük" ],
     "type" : "variant",
     "subtag" : "nulik",
@@ -79889,9 +79890,9 @@ data = r'''
       "year" : 2012,
       "month" : 1,
       "day" : 28
-    },
-    "prefix" : "vo"
+    }
   }, {
+    "prefix" : [ "sl-rozaj" ],
     "description" : [ "The Oseacco dialect of Resian", "The Osojane dialect of Resian" ],
     "type" : "variant",
     "subtag" : "osojs",
@@ -79900,9 +79901,9 @@ data = r'''
       "month" : 7,
       "day" : 5
     },
-    "prefix" : "sl-rozaj",
     "comments" : "The dialect of Oseacco/Osojane is one of the four major local dialects of Resian"
   }, {
+    "prefix" : [ "djk" ],
     "description" : [ "Pamaka dialect" ],
     "type" : "variant",
     "subtag" : "pamaka",
@@ -79911,9 +79912,9 @@ data = r'''
       "month" : 9,
       "day" : 5
     },
-    "prefix" : "djk",
     "comments" : "Pamaka dialect of the \"Busi Nenge Tongo\" English-based Creole continuum in Eastern Suriname and Western French Guiana"
   }, {
+    "prefix" : [ "ru" ],
     "description" : [ "Petrine orthography" ],
     "type" : "variant",
     "subtag" : "petr1708",
@@ -79922,9 +79923,9 @@ data = r'''
       "month" : 10,
       "day" : 10
     },
-    "prefix" : "ru",
     "comments" : "Russian orthography from the Petrine orthographic reforms of 1708 to the 1917 orthographic reform"
   }, {
+    "prefix" : [ "zh-Latn", "bo-Latn" ],
     "description" : [ "Pinyin romanization" ],
     "type" : "variant",
     "subtag" : "pinyin",
@@ -79932,9 +79933,9 @@ data = r'''
       "year" : 2008,
       "month" : 10,
       "day" : 14
-    },
-    "prefix" : "bo-Latn"
+    }
   }, {
+    "prefix" : [ "el" ],
     "description" : [ "Polytonic Greek" ],
     "type" : "variant",
     "subtag" : "polyton",
@@ -79942,9 +79943,9 @@ data = r'''
       "year" : 2006,
       "month" : 12,
       "day" : 11
-    },
-    "prefix" : "el"
+    }
   }, {
+    "prefix" : [ "rm" ],
     "description" : [ "Puter idiom of Romansh" ],
     "type" : "variant",
     "subtag" : "puter",
@@ -79953,9 +79954,9 @@ data = r'''
       "month" : 6,
       "day" : 29
     },
-    "prefix" : "rm",
     "comments" : "Puter is one of the five traditional written standards or \"idioms\" of the Romansh language."
   }, {
+    "prefix" : [ "vo" ],
     "description" : [ "Volapük rigik", "Schleyer's Volapük", "Original Volapük", "Classic Volapük" ],
     "type" : "variant",
     "subtag" : "rigik",
@@ -79963,9 +79964,9 @@ data = r'''
       "year" : 2012,
       "month" : 1,
       "day" : 28
-    },
-    "prefix" : "vo"
+    }
   }, {
+    "prefix" : [ "sl" ],
     "description" : [ "Resian", "Resianic", "Rezijan" ],
     "type" : "variant",
     "subtag" : "rozaj",
@@ -79973,9 +79974,9 @@ data = r'''
       "year" : 2005,
       "month" : 10,
       "day" : 16
-    },
-    "prefix" : "sl"
+    }
   }, {
+    "prefix" : [ "rm" ],
     "description" : [ "Rumantsch Grischun" ],
     "type" : "variant",
     "subtag" : "rumgr",
@@ -79984,9 +79985,9 @@ data = r'''
       "month" : 6,
       "day" : 29
     },
-    "prefix" : "rm",
     "comments" : "Supraregional Romansh written standard"
   }, {
+    "prefix" : [ "en" ],
     "description" : [ "Scottish Standard English" ],
     "type" : "variant",
     "subtag" : "scotland",
@@ -79994,9 +79995,9 @@ data = r'''
       "year" : 2007,
       "month" : 8,
       "day" : 31
-    },
-    "prefix" : "en"
+    }
   }, {
+    "prefix" : [ "en" ],
     "description" : [ "Scouse" ],
     "type" : "variant",
     "subtag" : "scouse",
@@ -80005,9 +80006,9 @@ data = r'''
       "month" : 9,
       "day" : 18
     },
-    "prefix" : "en",
     "comments" : "English Liverpudlian dialect known as 'Scouse'"
   }, {
+    "prefix" : [ "sl-rozaj" ],
     "description" : [ "The Stolvizza dialect of Resian", "The Solbica dialect of Resian" ],
     "type" : "variant",
     "subtag" : "solba",
@@ -80016,9 +80017,9 @@ data = r'''
       "month" : 7,
       "day" : 5
     },
-    "prefix" : "sl-rozaj",
     "comments" : "The dialect of Stolvizza/Solbica is one of the four major local dialects of Resian"
   }, {
+    "prefix" : [ "rm" ],
     "description" : [ "Surmiran idiom of Romansh" ],
     "type" : "variant",
     "subtag" : "surmiran",
@@ -80027,9 +80028,9 @@ data = r'''
       "month" : 6,
       "day" : 29
     },
-    "prefix" : "rm",
     "comments" : "Surmiran is one of the five traditional written standards or \"idioms\" of the Romansh language."
   }, {
+    "prefix" : [ "rm" ],
     "description" : [ "Sursilvan idiom of Romansh" ],
     "type" : "variant",
     "subtag" : "sursilv",
@@ -80038,9 +80039,9 @@ data = r'''
       "month" : 6,
       "day" : 29
     },
-    "prefix" : "rm",
     "comments" : "Sursilvan is one of the five traditional written standards or \"idioms\" of the Romansh language."
   }, {
+    "prefix" : [ "rm" ],
     "description" : [ "Sutsilvan idiom of Romansh" ],
     "type" : "variant",
     "subtag" : "sutsilv",
@@ -80049,9 +80050,9 @@ data = r'''
       "month" : 6,
       "day" : 29
     },
-    "prefix" : "rm",
     "comments" : "Sutsilvan is one of the five traditional written standards or \"idioms\" of the Romansh language."
   }, {
+    "prefix" : [ "be" ],
     "description" : [ "Belarusian in Taraskievica orthography" ],
     "type" : "variant",
     "subtag" : "tarask",
@@ -80060,9 +80061,9 @@ data = r'''
       "month" : 4,
       "day" : 27
     },
-    "prefix" : "be",
     "comments" : "The subtag represents Branislau Taraskievic's Belarusian orthography as published in \"Bielaruski klasycny pravapis\" by Juras Buslakou, Vincuk Viacorka, Zmicier Sanko, and Zmicier Sauka (Vilnia- Miensk 2005)."
   }, {
+    "prefix" : [ "kw" ],
     "description" : [ "Unified Cornish orthography of Revived Cornish" ],
     "type" : "variant",
     "subtag" : "uccor",
@@ -80070,9 +80071,9 @@ data = r'''
       "year" : 2008,
       "month" : 10,
       "day" : 14
-    },
-    "prefix" : "kw"
+    }
   }, {
+    "prefix" : [ "kw" ],
     "description" : [ "Unified Cornish Revised orthography of Revived Cornish" ],
     "type" : "variant",
     "subtag" : "ucrcor",
@@ -80080,9 +80081,9 @@ data = r'''
       "year" : 2008,
       "month" : 10,
       "day" : 14
-    },
-    "prefix" : "kw"
+    }
   }, {
+    "prefix" : [ "sco" ],
     "description" : [ "Ulster dialect of Scots" ],
     "type" : "variant",
     "subtag" : "ulster",
@@ -80090,9 +80091,9 @@ data = r'''
       "year" : 2010,
       "month" : 4,
       "day" : 10
-    },
-    "prefix" : "sco"
+    }
   }, {
+    "prefix" : [ "sa" ],
     "description" : [ "Vedic Sanskrit" ],
     "type" : "variant",
     "subtag" : "vaidika",
@@ -80101,9 +80102,9 @@ data = r'''
       "month" : 7,
       "day" : 28
     },
-    "prefix" : "sa",
     "comments" : "The most ancient dialect of Sanskrit used in verse and prose composed until about the 4th century B.C.E."
   }, {
+    "prefix" : [ "ca" ],
     "description" : [ "Valencian" ],
     "type" : "variant",
     "subtag" : "valencia",
@@ -80112,9 +80113,9 @@ data = r'''
       "month" : 3,
       "day" : 6
     },
-    "prefix" : "ca",
     "comments" : "Variety spoken in the \"Comunidad Valenciana\" region of Spain, where it is co-official with Spanish."
   }, {
+    "prefix" : [ "rm" ],
     "description" : [ "Vallader idiom of Romansh" ],
     "type" : "variant",
     "subtag" : "vallader",
@@ -80123,9 +80124,9 @@ data = r'''
       "month" : 6,
       "day" : 29
     },
-    "prefix" : "rm",
     "comments" : "Vallader is one of the five traditional written standards or \"idioms\" of the Romansh language."
   }, {
+    "prefix" : [ "zh-Latn" ],
     "description" : [ "Wade-Giles romanization" ],
     "type" : "variant",
     "subtag" : "wadegile",
@@ -80133,8 +80134,7 @@ data = r'''
       "year" : 2008,
       "month" : 10,
       "day" : 3
-    },
-    "prefix" : "zh-Latn"
+    }
   }, {
     "description" : [ "Lojban" ],
     "type" : "grandfathered",
