@@ -320,7 +320,6 @@ class BCP47ToUnilangConverter(object):
         def _get_part(part):
             return parts[part]['subtag'].lower() if parts[part] else None
 
-        # TODO: Grandfathered tags
         language = _get_part('language')
         region = _get_part('region')
         script = _get_part('script')

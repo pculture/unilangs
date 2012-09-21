@@ -231,7 +231,28 @@ def _validate(l):
     return l
 
 
+# Normalizing
+def _normalize(l):
+    """Normalize a language code dict to the canonical form specified by BCP47."""
+
+    if l['grandfathered']:
+        preferred = l['grandfathered'].get('preferred-value')
+        if preferred:
+            return parse_code(preferred)
+
+    if l['extlang']:
+        preferred = l['extlang'].get('preferred-value')
+        l['extlang'] = None
+        l['language'] = LANGUAGE_SUBTAGS[preferred]
+    
+    if l['language']:
+        preferred = l['language'].get('preferred-value')
+        if preferred:
+            l['language'] = LANGUAGE_SUBTAGS[preferred]
+
+    return l
+
+
 # Public API
 def parse_code(bcp47_language_code):
-    return _validate(_parse_code(bcp47_language_code))
-
+    return _normalize(_validate(_parse_code(bcp47_language_code)))

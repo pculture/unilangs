@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from os.path import dirname, join
 
+import unilangs.bcp47.parser as parser
 from unittest import TestCase
 from unilangs.bcp47.parser import (
     parse_code, MalformedLanguageCodeException
@@ -30,13 +31,19 @@ class BCP47ParserTest(TestCase):
 
 
     def test_grandfathered(self):
-        p = parse_code('i-klingon')
+        p = parser._parse_code('i-klingon')
         self.assertEqual(p['grandfathered']['tag'], 'i-klingon')
         self.assertEqual(p['grandfathered']['description'][0], 'Klingon')
         self.assertNil(p, ['language', 'extlang', 'script', 'region',
                            'variants', 'extensions'])
 
-        p = parse_code('art-lojban')
+        p = parser._parse_code('i-navajo')
+        self.assertEqual(p['grandfathered']['tag'], 'i-navajo')
+        self.assertEqual(p['grandfathered']['description'][0], 'Navajo')
+        self.assertNil(p, ['language', 'extlang', 'script', 'region',
+                           'variants', 'extensions'])
+
+        p = parser._parse_code('art-lojban')
         self.assertEqual(p['grandfathered']['tag'], 'art-lojban')
         self.assertEqual(p['grandfathered']['description'][0], 'Lojban')
         self.assertNil(p, ['language', 'extlang', 'script', 'region',
@@ -196,18 +203,24 @@ class BCP47ParserTest(TestCase):
         self.assertMalformed('hy-Latn-IT-invalid')
 
     def test_language_extlang(self):
-        p = parse_code('zh-cmn-Hans-CN')
+        p = parser._parse_code('zh-cmn-Hans-CN')
         self.assertTagDesc(p['language'], 'zh', 'Chinese')
         self.assertTagDesc(p['extlang'], 'cmn', 'Mandarin Chinese')
         self.assertTagDesc(p['script'], 'hans', 'Han (Simplified variant)')
         self.assertTagDesc(p['region'], 'cn', 'China')
         self.assertNil(p, ['variants', 'extensions', 'grandfathered'])
 
-        p = parse_code('zh-yue-HK')
+        p = parser._parse_code('zh-yue-HK')
         self.assertTagDesc(p['language'], 'zh', 'Chinese')
         self.assertTagDesc(p['extlang'], 'yue', 'Yue Chinese')
         self.assertTagDesc(p['region'], 'hk', 'Hong Kong')
         self.assertNil(p, ['script', 'variants', 'extensions', 'grandfathered'])
+
+        p = parser._parse_code('sgn-ase')
+        self.assertTagDesc(p['language'], 'sgn', 'Sign languages')
+        self.assertTagDesc(p['extlang'], 'ase', 'American Sign Language')
+        self.assertNil(p, ['script', 'region', 'variants', 'extensions',
+                           'grandfathered'])
 
         self.assertMalformed('zh-invalid-Hans-CN')
         self.assertMalformed('zh-cmn-invalid-CN')
@@ -258,6 +271,7 @@ class BCP47ParserTest(TestCase):
         # 100% sure so we'll accept it for now.
         # self.assertMalformed('x-foo-a-bar')
 
+
     def test_invalid(self):
         """Test some malformed tags to make sure they don't parse."""
 
@@ -279,6 +293,7 @@ class BCP47ParserTest(TestCase):
         self.assertMalformed('ar-a-aaa-b-bbb-a-ccc')
         self.assertMalformed('en-us-a-123-b-bbb-a-ccc')
 
+
     def test_youtube(self):
         """Test a bunch of language codes YouTube uses.
 
@@ -294,3 +309,52 @@ class BCP47ParserTest(TestCase):
                 code = code.replace('_', '-')
 
                 self.assertIsNotNone(parse_code(code))
+
+
+    def test_normalization_grandfathered(self):
+        p = parse_code('i-navajo')
+        self.assertTagDesc(p['language'], 'nv', 'Navajo')
+        self.assertNil(p, ['extlang', 'script', 'region', 'variants',
+                           'extensions', 'grandfathered'])
+
+        p = parse_code('art-lojban')
+        self.assertTagDesc(p['language'], 'jbo', 'Lojban')
+        self.assertNil(p, ['extlang', 'script', 'region', 'variants',
+                           'extensions', 'grandfathered'])
+
+    def test_normalization_extlangs(self):
+        p = parse_code('sgn-ase')
+        self.assertTagDesc(p['language'], 'ase', 'American Sign Language')
+        self.assertNil(p, ['extlang', 'script', 'region', 'variants',
+                           'extensions', 'grandfathered'])
+
+        p = parse_code('ar-abh')
+        self.assertTagDesc(p['language'], 'abh', 'Tajiki Arabic')
+        self.assertNil(p, ['extlang', 'script', 'region', 'variants',
+                           'extensions', 'grandfathered'])
+    def test_normalization_languages(self):
+        p = parse_code('ji-Latn')
+        self.assertTagDesc(p['language'], 'yi', 'Yiddish')
+        self.assertTagDesc(p['script'], 'latn', 'Latin')
+        self.assertNil(p, ['extlang', 'region', 'variants', 'extensions',
+                           'grandfathered'])
+
+        p = parse_code('iw-u-foo-bar')
+        self.assertTagDesc(p['language'], 'he', 'Hebrew')
+        self.assertEqual(p['extensions'], {'u': ['foo', 'bar']})
+        self.assertNil(p, ['extlang', 'script', 'region', 'variants',
+                           'grandfathered'])
+    def test_normalization_redundant(self):
+        # These aren't special cases -- they're just provided in the subtag
+        # registry as examples for god knows why.
+
+        p = parse_code('zh-gan')
+        self.assertTagDesc(p['language'], 'gan', 'Gan Chinese')
+        self.assertNil(p, ['extlang', 'script', 'region', 'variants',
+                           'extensions', 'grandfathered'])
+
+        p = parse_code('zh-cmn-Hans')
+        self.assertTagDesc(p['language'], 'cmn', 'Mandarin Chinese')
+        self.assertTagDesc(p['script'], 'hans', 'Han (Simplified variant)')
+        self.assertNil(p, ['extlang', 'region', 'variants', 'extensions',
+                           'grandfathered'])
