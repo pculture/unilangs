@@ -124,9 +124,9 @@ class BCP47ParserTest(TestCase):
         self.assertMalformed('en-murica')
 
     def test_language_script_region(self):
-        p = parse_code('en-Latn-us')
+        p = parse_code('en-Arab-us')
         self.assertTagDesc(p['language'], 'en', 'English')
-        self.assertTagDesc(p['script'], 'latn', 'Latin')
+        self.assertTagDesc(p['script'], 'arab', 'Arabic')
         self.assertTagDesc(p['region'], 'us', 'United States')
         self.assertNil(p, ['extlang', 'variants', 'extensions', 'grandfathered'])
 
@@ -344,6 +344,25 @@ class BCP47ParserTest(TestCase):
         self.assertEqual(p['extensions'], {'u': ['foo', 'bar']})
         self.assertNil(p, ['extlang', 'script', 'region', 'variants',
                            'grandfathered'])
+
+    def test_normalization_suppress_script(self):
+        p = parse_code('en-Latn')
+        self.assertTagDesc(p['language'], 'en', 'English')
+        self.assertNil(p, ['extlang', 'script', 'region', 'variants',
+                           'extensions', 'grandfathered'])
+
+        p = parse_code('is-Latn-IS-x-puffins')
+        self.assertTagDesc(p['language'], 'is', 'Icelandic')
+        self.assertTagDesc(p['region'], 'is', 'Iceland')
+        self.assertEqual(p['extensions'], {'x': ['puffins']})
+        self.assertNil(p, ['extlang', 'script', 'variants', 'grandfathered'])
+
+        p = parse_code('ja-Latn')
+        self.assertTagDesc(p['language'], 'ja', 'Japanese')
+        self.assertTagDesc(p['script'], 'latn', 'Latin')
+        self.assertNil(p, ['extlang', 'region', 'variants', 'extensions',
+                           'grandfathered'])
+
     def test_normalization_redundant(self):
         # These aren't special cases -- they're just provided in the subtag
         # registry as examples for god knows why.

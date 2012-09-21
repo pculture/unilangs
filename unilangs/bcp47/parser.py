@@ -250,6 +250,10 @@ def _normalize(l):
         if preferred:
             l['language'] = LANGUAGE_SUBTAGS[preferred]
 
+        suppress = l['language'].get('suppress-script')
+        if suppress and l['script'] and l['script']['subtag'] == suppress:
+            l['script'] = None
+
     return l
 
 
