@@ -303,7 +303,6 @@ def _make_unilangs_to_bcp47():
     result = {}
 
     for bcp47, unilangs_code in BCP47_TO_UNILANGS_STRICT.items():
-        print bcp47, unilangs_code
         language, region, script = bcp47
         bcp47_code = '-'.join(filter(None, (language, script, region)))
         result[unilangs_code] = bcp47_code
@@ -321,6 +320,7 @@ class BCP47ToUnilangConverter(object):
         def _get_part(part):
             return parts[part]['subtag'].lower() if parts[part] else None
 
+        # TODO: Grandfathered tags
         language = _get_part('language')
         region = _get_part('region')
         script = _get_part('script')

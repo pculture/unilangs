@@ -51,7 +51,17 @@ def _split_at(pred, seq):
 
 # Parsing codes
 def _next_chunk(code):
-    """Split a chunk off of the given code, return (chunk, rest)."""
+    """Split a chunk off of the given code, return (chunk, rest).
+    
+    For example:
+
+        _next_chunk('en-Latn-us')
+        ('en', 'Latn-us')
+
+        _next_chunk('en')
+        ('en', '')
+
+    """
     return code.split('-', 1) if '-' in code else (code, '')
 
 
@@ -63,7 +73,7 @@ def _parse_extensions(code):
 
     A dict of lists will be returned, looking something like this:
 
-        _parse_extensions('x-foo-bar-a-baz')
+        _parse_extensions('a-baz-x-foo-bar')
 
         {'x': ['foo', 'bar'],
          'a': ['baz']}
@@ -186,6 +196,7 @@ def _parse_code(code):
             "Invalid primary language '%s'!" % language)
 
     # Parse the rest of the subtags, in order.
+    # TODO: handle multiple extlangs.
     result['extlang'], next, code = _parse_subtag(next, code, EXTLANG_SUBTAGS)
     result['script'], next, code = _parse_subtag(next, code, SCRIPT_SUBTAGS)
     result['region'], next, code = _parse_subtag(next, code, REGION_SUBTAGS)
