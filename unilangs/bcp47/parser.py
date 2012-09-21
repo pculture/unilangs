@@ -64,10 +64,21 @@ def _get_in(d, *keys):
             return None
     return d
 
+def _strip_dict(d):
+    """Return a new dict with falsy keys stripped out."""
+
+    return dict((k, v) for k, v in d.items() if v)
+
+def _filter_keys(d, pred):
+    """Filter the dict, keeping entries whose keys satisfy a predicate."""
+
+    return dict((k, v) for k, v in d.items() if pred(k))
+
+
 # Parsing codes
 def _next_chunk(code):
     """Split a chunk off of the given code, return (chunk, rest).
-    
+
     For example:
 
         _next_chunk('en-Latn-us')
@@ -244,6 +255,41 @@ def _validate_extlang_prefix(l):
                 "Extlang '%s' requires a language of '%s', but got '%s' instead!"
                 % (_get_in(l, 'extlang', 'subtag'), prefix, actual_lang))
 
+
+def _check_prefix(l, prefix):
+    """Return whether the language dict satisfies the given prefix."""
+    prefix_dict = _parse_code(prefix)
+
+    required_language = prefix_dict.pop('language')['subtag']
+    required_variants = [v['subtag'] for v in prefix_dict.pop('variants')]
+
+    actual_language = l['language']['subtag']
+    actual_variants = [v['subtag'] for v in l['variants']]
+
+    if actual_language == required_language:
+        if all([v in actual_variants for v in required_variants]):
+            return True
+
+def _validate_single_variant(l, variant):
+    """Validate that the variant is okay to exist on the given language."""
+
+    prefixes = _get_in(variant, 'prefix')
+
+    for prefix in prefixes:
+        if _check_prefix(l, prefix):
+            break
+    else:
+        raise InvalidLanguageCodeException(
+            "Variant '%s' must be used with one of the prefixes [%s] but was not!"
+            % (variant['subtag'], ', '.join(prefixes)))
+
+def _validate_variant_prefixes(l):
+    """This process is horrible and someone should fix it."""
+    variants = _get_in(l, 'variants')
+    for variant in variants:
+        _validate_single_variant(l, variant)
+
+
 def _validate(l):
     """Validated that the parsed language dict makes sense.
 
@@ -256,6 +302,7 @@ def _validate(l):
         return l
 
     _validate_extlang_prefix(l)
+    _validate_variant_prefixes(l)
 
     return l
 
@@ -273,7 +320,7 @@ def _normalize(l):
         preferred = l['extlang'].get('preferred-value')
         l['extlang'] = None
         l['language'] = LANGUAGE_SUBTAGS[preferred]
-    
+
     if l['language']:
         preferred = l['language'].get('preferred-value')
         if preferred:
