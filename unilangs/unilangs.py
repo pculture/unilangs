@@ -358,7 +358,6 @@ def _generate_initial_data():
         'tt': (gettext_noop(u'Tartar'), u'Tatarça / Татарча'),
         'tw': (gettext_noop(u'Twi'), u'Twi'),
         'ty': (gettext_noop(u'Tahitian'), u'Tahitian'),
-        'ug': (gettext_noop(u'Uighur'), u'Oyghurque'),
         'uk': (gettext_noop(u'Ukrainian'), u'Українська'),
         'umb': (gettext_noop(u'Umbundu'), u'Umbundu'),
         'ug': (gettext_noop(u'Uyghur'), u'ئۇيغۇر'),
