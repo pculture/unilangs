@@ -167,7 +167,7 @@ def _generate_initial_data():
         'bs': (gettext_noop(u'Bosnian'), u'Bosanski'),
         'bug': (gettext_noop(u'Buginese'), u'Basa Ugi'),
         'ca': (gettext_noop(u'Catalan'), u'Català'),
-        'cak': (gettext_noop(u'Cakchiquel, Central',) u'Cakchiquel, Central'),
+        'cak': (gettext_noop(u'Cakchiquel, Central'), u'Cakchiquel, Central'),
         'ce': (gettext_noop(u'Chechen'), u'Chechen'),
         'ceb': (gettext_noop(u'Cebuano'), u'Cebuano'),
         'ch': (gettext_noop(u'Chamorro'), u'Chamoru'),
