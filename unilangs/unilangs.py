@@ -212,7 +212,7 @@ def _generate_initial_data():
         'gn': (gettext_noop(u'Guaran'), u'Avañe\'ẽ'),
         'gu': (gettext_noop(u'Gujarati'), u'ગુજરાતી'),
         'gv': (gettext_noop(u'Manx'), u'Gaelg'),
-        'hb': (gettext_noop(u'HamariBoli (Roman Hindi-Urdu'), u'HamariBoli'),
+        'hb': (gettext_noop(u'HamariBoli (Roman Hindi-Urdu)'), u'HamariBoli'),
         'hai': (gettext_noop(u'Haida'), u'Haida'),
         'hau': (gettext_noop(u'Hausa'), u'هَوُسَ'),
         'haz': (gettext_noop(u'Hazaragi'), u'هزارگی'),
