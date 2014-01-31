@@ -267,7 +267,7 @@ def _generate_initial_data():
         'luo': (gettext_noop(u'Luo'), u'Luo'),
         'luy': (gettext_noop(u'Luhya'), u'Luhya'),
         'lv': (gettext_noop(u'Latvian'), u'Latviešu'),
-        'meta-audio': (gettext_noop(u'Metadata: Audio Description', u'Metadata: Audio Description'),
+        'meta-audio': (gettext_noop(u'Metadata: Audio Description'), u'Metadata: Audio Description'),
         'meta-geo': (gettext_noop(u'Metadata: Geo'), u'Metadata: Geo'),
         'meta-tw': (gettext_noop(u'Metadata: Twitter'), u'Metadata: Twitter'),
         'meta-wiki': (gettext_noop(u'Metadata: Wikipedia'), u'Metadata: Wikipedia'),
