@@ -378,7 +378,7 @@ def _generate_initial_data():
         'ts': (gettext_noop(u'Tsonga'), u'Xitsonga'),
         'tsn': (gettext_noop(u'Tswana'), u'Setswana'),
         'tsz': (gettext_noop(u'Purepecha'), u'Purepecha'),
-        'tt': (gettext_noop(u'Tartar'), u'Tatarça / Татарча'),
+        'tt': (gettext_noop(u'Tatar'), u'Tatarça / Татарча'),
         'tw': (gettext_noop(u'Twi'), u'Twi'),
         'ty': (gettext_noop(u'Tahitian'), u'Tahitian'),
         'tzh': (gettext_noop(u'Tzeltal, Oxchuc'), u'Tzeltal, Oxchuc'),
