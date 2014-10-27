@@ -1151,38 +1151,6 @@ def _add_youtube():
         'za': 'za',
         'zu': 'zul'})
 
-def _add_vimeo():
-    # Adding in just the things that differ, and not all langs.
-    add_standard('vimeo', {
-        #vimeo code : amara code
-        'am': 'amh',
-        'en-us': 'en',
-        'es-es': 'es',
-        'fy-nl': 'fy',
-        'ha': 'hau',
-        'iw': 'he',
-        'ln': 'lin',
-        'mg': 'mig',
-        'om': 'orm',
-        'pa': 'pan',
-        'pt-pt': 'pt',
-        'qu': 'que',
-        'rn': 'run',
-        'rw': 'kin',
-        'sn': 'sna',
-        'so': 'som',
-        'sw': 'swa',
-        'ti': 'tir',
-        'tn': 'tsn',
-        'wo': 'wol',
-        'xh': 'xho',
-        'yo': 'yor',
-        'zh-hans': 'zh-cn',
-        'zh-hant': 'zh-tw',
-        'zu': 'zul',
-     }
-     )
-
 def _add_bcp47():
     add_standard_custom('bcp47', StrictBCP47ToUnilangConverter(),
                         UNILANGS_TO_BCP47)
