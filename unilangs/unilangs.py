@@ -330,7 +330,7 @@ def _generate_initial_data():
         'os': (gettext_noop(u'Ossetian, Ossetic'), u'Ossetian, Ossetic'),
         'pam': (gettext_noop(u'Kapampangan'), u'Pampango'),
         'pap': (gettext_noop(u'Papiamento'), u'Papiamentu'),
-        'pan': (gettext_noop(u'Eastern Punjabi'), u'ਪੂਰਬੀ ਨੂੰ ਪੰਜਾਬੀ'),
+        'pan': (gettext_noop(u'Eastern Punjabi'), u'ਪੰਜਾਬੀ'),
         'pi': (gettext_noop(u'Pali'), u'पािऴ'),
         'pl': (gettext_noop(u'Polish'), u'Polski'),
         'pnb': (gettext_noop(u'Western Punjabi'), u'پنجابی'),
