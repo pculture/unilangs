@@ -195,6 +195,7 @@ def _generate_initial_data():
         'en-gb': (gettext_noop(u'English, British'), u'English, British'),
         'en-ca': (gettext_noop(u'English (Canada)'), u'English (Canada)'),
         'en-ie': (gettext_noop(u'English (Ireland)'), u'English (Ireland)'),
+        'en-us': (gettext_noop(u'English (United States)'), u'English (United States)'),
         'eo': (gettext_noop(u'Esperanto'), u'Esperanto'),
         'es': (gettext_noop(u'Spanish'), u'Español'),
         'es-419': (gettext_noop(u'Spanish (Latin America)'), u'Español (América Latina)'),
@@ -722,29 +723,19 @@ def _add_unisubs():
         'ctd': 'ctd',
         'cu': 'cu',
         'cv': 'cv',
-        'de-at': 'de-at',
-        'de-ch': 'de-ch',
-        'din': 'din',
         'dv': 'dv',
         'dz': 'dz',
         'ee': 'ee',
         'efi': 'efi',
-        'en-ca': 'en-ca',
         'en-gb': 'en-gb',
-        'en-ie': 'en-ie',
         'eo': 'eo',
-        'es-419': 'es-419',
         'es-ar': 'es-ar',
-        'fa-af': 'fa-af',
         'ff': 'ff',
         'fil': 'fil',
         'fj': 'fj',
         'fo': 'fo',
-        'fr-be': 'fr-be',
         'fr-ca': 'fr-ca',
-        'fr-ch': 'fr-ch',
         'ful': 'ful',
-        'fy': 'fy',
         'ga': 'ga',
         'gd': 'gd',
         'gn': 'gn',
@@ -827,7 +818,6 @@ def _add_unisubs():
         'nd': 'nd',
         'ne': 'ne',
         'ng': 'ng',
-        'nl-be': 'nl-be',
         'nr': 'nr',
         'nso': 'nso',
         'nv': 'nv',
@@ -869,7 +859,6 @@ def _add_unisubs():
         'sr-latn': 'sr-latn',
         'srp': 'srp',
         'ss': 'ss',
-        'st': 'st',
         'su': 'su',
         'swa': 'swa',
         'szl': 'szl',
@@ -1167,11 +1156,17 @@ _add_bcp47()
 
 class LanguageCode(object):
     def __init__(self, language_code, standard):
+        if standard == 'internal':
+            self._code = language_code
+            return
         try:
             standard_dict = TO_INTERNAL[standard.lower()]
         except KeyError:
             raise Exception("Standard '%s' is not registred" % standard)
         self._code = standard_dict[language_code]
+
+    def to_internal(self):
+        return self._code
 
     def encode(self, standard, fuzzy=False):
         """Return the code for this language in the given standard."""
@@ -1244,7 +1239,10 @@ class LanguageCode(object):
 
 def get_language_name_mapping(standard):
     """Return a dict of code -> english name for all languages in the standard."""
-    return dict((code, LanguageCode(code, standard).name())
+    if standard == 'internal':
+        return dict((code, name[0]) for code, name in INTERNAL_NAMES.items())
+    else:
+        return dict((code, LanguageCode(code, standard).name())
                 for code in TO_INTERNAL.get(standard))
 
 def get_language_native_mapping(standard):
