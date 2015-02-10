@@ -222,8 +222,6 @@ def _generate_initial_data():
         'ful': gettext_noop(u'Fula'),
         'fy': gettext_noop('Western Frisian'),
         'fy-nl': gettext_noop(u'Frisian'),
-        'g': gettext_noop('u'),
-        'g': gettext_noop('v'),
         'ga': gettext_noop(u'Irish'),
         'gd': gettext_noop(u'Scottish Gaelic'),
         'gl': gettext_noop(u'Galician'),
