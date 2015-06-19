@@ -441,7 +441,7 @@ def _generate_initial_data():
         'yua': gettext_noop(u'Maya, Yucat\xe1n'),
         'za': gettext_noop(u'Zhuang, Chuang'),
         'zam': gettext_noop(u'Zapotec, Miahuatl\xe1n'),
-        'zh': gettext_noop(u'Chinese, Yue'),
+        'zh': gettext_noop(u'Chinese'),
         'zh-cn': gettext_noop(u'Chinese, Simplified'),
         'zh-hans': gettext_noop('Chinese (Simplified Han)'),
         'zh-hant': gettext_noop('Chinese (Traditional Han)'),
