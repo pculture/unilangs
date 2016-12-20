@@ -79,7 +79,25 @@ FROM_INTERNAL = {}
 
 gettext_noop = lambda s: s
 
-def add_standard(standard, mapping, base=None, exclude=None):
+def convert_bcp47_case(language_code):
+    """
+    en -> en
+    fr -> fr
+    fr-ca -> fr-CA
+    es-mx -> es-MX
+    zh-cn -> zh-CN
+    zh-hant -> zh-Hant
+    zh-hans -> zh-Hans
+    """
+    language_country = language_code.split('-')
+    if len(language_country) > 1:
+        if len(language_country[1]) > 2:
+            language_code = language_country[0] + '-' + language_country[1].capitalize()
+        else:
+            language_code = language_country[0] + '-' + language_country[1].upper()
+    return language_code
+
+def add_standard(standard, mapping, base=None, exclude=None, bcp47_case=False):
     """Add a new standard to the list of supported standards.
 
     `mapping` should be a dictionary mapping your custom standard's codes to the
@@ -110,14 +128,22 @@ def add_standard(standard, mapping, base=None, exclude=None):
 
     """
     if base:
-        forward_map = TO_INTERNAL[base].copy()
+        if bcp47_case:
+            forward_map = {}
+            reverse_map = {}
+            for key, val in TO_INTERNAL[base].iteritems():
+                forward_map[convert_bcp47_case(key)] = val
+            for key, val in FROM_INTERNAL[base].iteritems():
+                reverse_map[key] = convert_bcp47_case(val)
+        else:
+            forward_map = TO_INTERNAL[base].copy()
+            reverse_map = FROM_INTERNAL[base].copy()
         forward_map.update(mapping)
 
         if exclude:
             for c in exclude:
                 del forward_map[c]
 
-        reverse_map = FROM_INTERNAL[base].copy()
         reverse_map.update(_reverse_dict(mapping))
     else:
         forward_map = mapping
@@ -968,9 +994,9 @@ def _add_unisubs():
 
 def _add_youtube():
     add_standard('youtube', {
-        'zh-hans': 'zh-cn',
-        'zh-hant': 'zh-tw',
-    }, base='unisubs')
+        'zh-Hans': 'zh-cn',
+        'zh-Hant': 'zh-tw',
+    }, base='unisubs', bcp47_case=True)
 
 def _add_bcp47():
     add_standard_custom('bcp47', StrictBCP47ToUnilangConverter(),
