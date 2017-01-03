@@ -236,6 +236,7 @@ def _generate_initial_data():
         'es': gettext_noop(u'Spanish'),
         'es-419': gettext_noop(u'Spanish (Latin America)'),
         'es-ar': gettext_noop(u'Spanish, Argentinian'),
+        'es-ec': gettext_noop(u'Spanish (Ecuador)'),
         'es-es': gettext_noop('Spanish (Spain)'),
         'es-mx': gettext_noop(u'Spanish, Mexican'),
         'es-ni': gettext_noop(u'Spanish, Nicaraguan'),
