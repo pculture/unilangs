@@ -998,10 +998,17 @@ def _add_youtube_with_mapping():
         'zh-Hans': 'zh-cn',
         'zh-Hant': 'zh-tw',
     }, base='unisubs', bcp47_case=True)
-
+    
 def _add_youtube():
     add_standard('youtube', {},
                  base='unisubs', bcp47_case=True)
+
+def _add_gettext():
+    # translate locale names from our gettext directories to internal language
+    # codes
+    add_standard('gettext', {
+        'az-az': 'az',
+    }, base='unisubs')
 
 def _add_bcp47():
     add_standard_custom('bcp47', StrictBCP47ToUnilangConverter(),
@@ -1017,6 +1024,7 @@ _add_unisubs()
 _add_youtube()
 _add_youtube_with_mapping()
 _add_bcp47()
+_add_gettext()
 
 class LanguageCode(object):
     def __init__(self, language_code, standard):
