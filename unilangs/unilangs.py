@@ -993,11 +993,15 @@ def _add_unisubs():
         'zul': 'zul',
     }, base='django')
 
-def _add_youtube():
-    add_standard('youtube', {
+def _add_youtube_with_mapping():
+    add_standard('youtube_with_mapping', {
         'zh-Hans': 'zh-cn',
         'zh-Hant': 'zh-tw',
     }, base='unisubs', bcp47_case=True)
+
+def _add_youtube():
+    add_standard('youtube', {},
+                 base='unisubs', bcp47_case=True)
 
 def _add_bcp47():
     add_standard_custom('bcp47', StrictBCP47ToUnilangConverter(),
@@ -1011,6 +1015,7 @@ _add_iso_639_1()
 _add_django()
 _add_unisubs()
 _add_youtube()
+_add_youtube_with_mapping()
 _add_bcp47()
 
 class LanguageCode(object):
