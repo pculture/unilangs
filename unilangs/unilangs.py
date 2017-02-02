@@ -240,6 +240,7 @@ def _generate_initial_data():
         'es': gettext_noop(u'Spanish'),
         'es-419': gettext_noop(u'Spanish (Latin America)'),
         'es-ar': gettext_noop(u'Spanish, Argentinian'),
+        'es-ec': gettext_noop(u'Spanish (Ecuador)'),
         'es-es': gettext_noop('Spanish (Spain)'),
         'es-mx': gettext_noop(u'Spanish, Mexican'),
         'es-ni': gettext_noop(u'Spanish, Nicaraguan'),
@@ -1000,8 +1001,8 @@ def _add_unisubs():
         'zul': 'zul',
     }, base='django')
 
-def _add_youtube():
-    add_standard('youtube', {
+def _add_youtube_with_mapping():
+    add_standard('youtube_with_mapping', {
         'ak': 'aka',
         'am': 'amh',
         'fy': 'fy-nl',
@@ -1027,6 +1028,17 @@ def _add_youtube():
         'zh-Hant': 'zh-tw',
         'zu': 'zul',
     }, base='unisubs', bcp47_case=True)
+    
+def _add_youtube():
+    add_standard('youtube', {},
+                 base='unisubs', bcp47_case=True)
+
+def _add_gettext():
+    # translate locale names from our gettext directories to internal language
+    # codes
+    add_standard('gettext', {
+        'az-az': 'az',
+    }, base='unisubs')
 
 def _add_bcp47():
     add_standard_custom('bcp47', StrictBCP47ToUnilangConverter(),
@@ -1040,7 +1052,9 @@ _add_iso_639_1()
 _add_django()
 _add_unisubs()
 _add_youtube()
+_add_youtube_with_mapping()
 _add_bcp47()
+_add_gettext()
 
 class LanguageCode(object):
     def __init__(self, language_code, standard):
