@@ -1017,6 +1017,9 @@ def _add_youtube_with_mapping():
     add_standard('youtube_with_mapping', {
         'ak': 'aka',
         'am': 'amh',
+        'en-AU': 'en-au',
+        'en-IN': 'en-in',
+        'en-419': 'es-419',
         'fy': 'fy-nl',
         'ha': 'hau',
         'ig': 'ibo',
@@ -1084,7 +1087,9 @@ class LanguageCode(object):
 
     def encode(self, standard, fuzzy=False):
         """Return the code for this language in the given standard."""
-        if fuzzy:
+        if standard == 'internal':
+            return self._code
+        elif fuzzy:
             return self._fuzzy_encode(standard)
         else:
             return FROM_INTERNAL[standard.lower()][self._code]
