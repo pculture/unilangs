@@ -38,7 +38,6 @@ from .bcp47.converter import (
 def _reverse_dict(d):
     return dict([(v, k) for k, v in d.items()])
 
-
 # INTERNAL_NAMES stores the English names for the various languages.
 #
 # Code -> English name
@@ -128,16 +127,25 @@ def add_standard(standard, mapping, base=None, exclude=None, bcp47_case=False):
 
     """
     if base:
+        if base == 'internal':
+            base_dict = {}
+            for key in INTERNAL_NAMES:
+                base_dict[key] = key
+            from_base_dict = base_dict.copy()
+            to_base_dict = base_dict
+        else:
+            from_base_dict = FROM_INTERNAL[base]
+            to_base_dict = TO_INTERNAL[base]
         if bcp47_case:
             forward_map = {}
             reverse_map = {}
-            for key, val in TO_INTERNAL[base].iteritems():
+            for key, val in to_base_dict.iteritems():
                 forward_map[convert_bcp47_case(key)] = val
-            for key, val in FROM_INTERNAL[base].iteritems():
+            for key, val in from_base_dict.iteritems():
                 reverse_map[key] = convert_bcp47_case(val)
         else:
-            forward_map = TO_INTERNAL[base].copy()
-            reverse_map = FROM_INTERNAL[base].copy()
+            forward_map = from_base_dict.copy()
+            reverse_map = to_base_dict.copy()
         forward_map.update(mapping)
 
         if exclude:
@@ -1017,9 +1025,6 @@ def _add_youtube_with_mapping():
     add_standard('youtube_with_mapping', {
         'ak': 'aka',
         'am': 'amh',
-        'en-AU': 'en-au',
-        'en-IN': 'en-in',
-        'en-419': 'es-419',
         'fy': 'fy-nl',
         'ha': 'hau',
         'ig': 'ibo',
@@ -1042,11 +1047,10 @@ def _add_youtube_with_mapping():
         'zh-Hans': 'zh-cn',
         'zh-Hant': 'zh-tw',
         'zu': 'zul',
-    }, base='unisubs', bcp47_case=True)
+    }, base='internal', bcp47_case=True)
     
 def _add_youtube():
-    add_standard('youtube', {},
-                 base='unisubs', bcp47_case=True)
+    add_standard('youtube', {}, base='internal', bcp47_case=True)
 
 def _add_gettext():
     # translate locale names from our gettext directories to internal language
