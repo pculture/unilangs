@@ -514,6 +514,7 @@ def _generate_initial_data():
         'zh-tw': gettext_noop(u'Chinese, Traditional'),
         'zu': gettext_noop('Zulu'),
         'zul': gettext_noop(u'Zulu'),
+        'zza': gettext_noop(u'Zazaki'),
     })
 
 def _add_iso_639_1():
@@ -660,7 +661,6 @@ def _add_iso_639_1():
         'gd': 'gd',
         'sr': 'sr',
         'sh': 'sh',
-        'shp': 'shp',
         'sn': 'sna',
         'ii': 'ii',
         'sd': 'sd',
@@ -970,6 +970,7 @@ def _add_unisubs():
         'sgn': 'sgn',
         'skx': 'skx',
         'sh': 'sh',
+        'shp': 'shp',
         'si': 'si',
         'sm': 'sm',
         'sna': 'sna',
@@ -1023,6 +1024,7 @@ def _add_unisubs():
         'zh-sg': 'zh-sg',
         'zh-hk': 'zh-hk',
         'zul': 'zul',
+        'zza': 'zza',
     }, base='django')
 
 def _add_youtube_with_mapping():
