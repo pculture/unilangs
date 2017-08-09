@@ -177,6 +177,7 @@ def _generate_initial_data():
     INTERNAL_NAMES.update({
         'aa': gettext_noop(u'Afar'),
         'ab': gettext_noop(u'Abkhazian'),
+        'ace': gettext_noop(u'Acehnese'),
         'ae': gettext_noop(u'Avestan'),
         'aeb': gettext_noop(u'Tunisian Arabic'),
         'af': gettext_noop(u'Afrikaans'),
@@ -784,6 +785,7 @@ def _add_unisubs():
     add_standard('unisubs', {
         'aa': 'aa',
         'ab': 'ab',
+        'ace': 'ace',
         'ae': 'ae',
         'aeb': 'aeb',
         'af': 'af',
