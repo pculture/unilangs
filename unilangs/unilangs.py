@@ -840,6 +840,7 @@ def _add_unisubs():
         'en-gb': 'en-gb',
         'eo': 'eo',
         'es-ar': 'es-ar',
+        'es-lat': 'es-419',
         'ff': 'ff',
         'fil': 'fil',
         'fj': 'fj',
