@@ -374,7 +374,7 @@ def _generate_initial_data():
         'mnk': gettext_noop(u'Mandinka'),
         'mo': gettext_noop(u'Moldavian, Moldovan'),
         'moh': gettext_noop(u'Mohawk'),
-        'mos': gettext_noop(u'Moor\xe9'),
+        'mos': gettext_noop(u'Moor\xe9 (Mossi)'),
         'mr': gettext_noop(u'Marathi'),
         'ms': gettext_noop(u'Malay'),
         'mt': gettext_noop(u'Maltese'),

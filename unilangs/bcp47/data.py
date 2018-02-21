@@ -39598,7 +39598,7 @@ data = r'''
       "day" : 29
     }
   }, {
-    "description" : [ "Mooré" ],
+    "description" : [ "Mooré (Mossi)" ],
     "type" : "language",
     "subtag" : "mos",
     "added" : {
