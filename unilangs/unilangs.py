@@ -277,7 +277,7 @@ def _generate_initial_data():
         'ga': gettext_noop(u'Irish'),
         'gd': gettext_noop(u'Scottish Gaelic'),
         'gl': gettext_noop(u'Galician'),
-        'gn': gettext_noop(u'Guaran'),
+        'gn': gettext_noop(u'Guarani'),
         'got': gettext_noop(u'Gothic'),
         'gsw': gettext_noop(u'Swiss German'),
         'gu': gettext_noop(u'Gujarati'),
