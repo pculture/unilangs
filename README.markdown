@@ -15,4 +15,4 @@ Copyright (c) 2012 [Participatory Culture Foundation][pcf] and contributors.
 
 MIT/X11 Licensed.
 
-[pcf]: http://pculture.org/
+[pcf]: https://pculture.org/
