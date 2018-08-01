@@ -1072,6 +1072,7 @@ def _add_youtube_with_mapping():
         'no': 'nb',
         'ny': 'nya',
         'pa': 'pan',
+        'fa-AF': 'prs',
         'pt-PT': 'pt',
         'rw': 'kin',
         'sn': 'sna',
